@@ -1,0 +1,63 @@
+# ==============================================================================
+# PT. Sejahtera Abadi Bersama — Monorepo .gitignore
+# ==============================================================================
+
+# Node.js & Next.js
+node_modules/
+apps/web/node_modules/
+.next/
+apps/web/.next/
+out/
+apps/web/out/
+build/
+dist/
+.pnp
+.pnp.js
+*.tsbuildinfo
+next-env.d.ts
+
+# Go Binaries & Tooling
+bin/
+services/api/bin/
+services/api/api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Environment variables & Secrets (NEVER COMMIT REAL SECRETS)
+.env
+.env.*
+!.env.example
+apps/web/.env
+apps/web/.env.*
+!apps/web/.env.example
+services/api/.env
+services/api/.env.*
+!services/api/.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Testing & Coverage
+coverage/
+*.lcov
+.nyc_output/

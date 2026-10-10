@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Go API Service
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    container_name: lpk_sejahtera_api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - ENV=development
+      - ALLOWED_ORIGINS=http://localhost:3000
+      - DATABASE_URL=${DATABASE_URL:-postgres://postgres:postgres@postgres:5432/lpk_db?sslmode=disable}
+      - SUPABASE_URL=${SUPABASE_URL:-http://supabase:8000}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET:-your-test-jwt-secret-min-32-chars-long}
+    depends_on:
+      - postgres
+
+  # Local PostgreSQL (for offline testing when Supabase is not reachable)
+  postgres:
+    image: postgres:16-alpine
+    container_name: lpk_sejahtera_postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=lpk_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./services/api/migrations:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  postgres_data:

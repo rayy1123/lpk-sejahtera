@@ -1,0 +1,217 @@
+openapi: 3.0.3
+info:
+  title: PT. Sejahtera Abadi Bersama LPK API
+  description: REST API backend untuk sistem operasional Lembaga Pelatihan Kerja PT. Sejahtera Abadi Bersama.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/api/v1
+    description: Local Development Server
+  - url: https://api.lpksejahtera.com/api/v1
+    description: Production Server
+
+tags:
+  - name: Public
+    description: Endpoint publik tanpa autentikasi
+  - name: Student
+    description: Endpoint untuk peserta pelatihan (wajib role student)
+  - name: Admin
+    description: Endpoint operasional administratif (super_admin, admin, staff)
+
+paths:
+  /programs:
+    get:
+      tags: [Public]
+      summary: Ambil daftar program pelatihan yang berstatus published
+      parameters:
+        - name: category
+          in: query
+          schema: { type: string }
+        - name: search
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Daftar program berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Program' }
+
+  /programs/{slug}:
+    get:
+      tags: [Public]
+      summary: Detail program berdasarkan slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Detail program
+        '404':
+          description: Program tidak ditemukan
+
+  /categories:
+    get:
+      tags: [Public]
+      summary: Ambil daftar kategori program aktif
+      responses:
+        '200':
+          description: Daftar kategori
+
+  /announcements:
+    get:
+      tags: [Public]
+      summary: Ambil berita dan pengumuman published
+      responses:
+        '200':
+          description: Daftar pengumuman
+
+  /student/profile:
+    get:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil profil peserta yang login
+      responses:
+        '200':
+          description: Data profil
+        '401':
+          description: Unauthorized
+    patch:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Perbarui profil peserta yang login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                full_name: { type: string }
+                phone: { type: string }
+      responses:
+        '200':
+          description: Profil diperbarui
+
+  /student/applications:
+    get:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil seluruh pendaftaran milik peserta login
+      responses:
+        '200':
+          description: Riwayat pendaftaran
+    post:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ajukan pendaftaran program baru
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [program_id]
+              properties:
+                program_id: { type: string, format: uuid }
+      responses:
+        '201':
+          description: Pendaftaran berhasil diajukan
+
+  /student/schedules:
+    get:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil jadwal pelatihan kelas peserta
+      responses:
+        '200':
+          description: Daftar jadwal
+
+  /student/documents:
+    get:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil daftar berkas yang diunggah peserta
+      responses:
+        '200':
+          description: Berkas peserta
+
+  /student/certificates:
+    get:
+      tags: [Student]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil sertifikat digital peserta
+      responses:
+        '200':
+          description: Sertifikat peserta
+
+  /admin/dashboard:
+    get:
+      tags: [Admin]
+      security: [{ BearerAuth: [] }]
+      summary: Ringkasan statistik administrasi LPK
+      responses:
+        '200':
+          description: Metrik dan statistik
+        '403':
+          description: Akses ditolak (bukan admin/staff)
+
+  /admin/applications:
+    get:
+      tags: [Admin]
+      security: [{ BearerAuth: [] }]
+      summary: Ambil daftar pendaftaran peserta dengan filter status
+      parameters:
+        - name: status
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Daftar pendaftaran
+
+  /admin/applications/{id}/review:
+    patch:
+      tags: [Admin]
+      security: [{ BearerAuth: [] }]
+      summary: Ubah status pendaftaran (review, approve, reject)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: { type: string, enum: [under_review, verified, approved, rejected] }
+                admin_notes: { type: string }
+      responses:
+        '200':
+          description: Status berhasil diubah
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Program:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        slug: { type: string }
+        description: { type: string }
+        duration: { type: string }
+        price: { type: number }
+        quota: { type: integer }
+        status: { type: string }

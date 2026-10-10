@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #163a5f;
+  --secondary: #16a6a1;
+  --background: #f5f7fa;
+  --surface: #ffffff;
+}
+
+body {
+  color: #1e293b;
+  background-color: var(--background);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom utility classes */
+.badge-status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.card-elevated {
+  @apply bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow duration-200;
+}

@@ -1,0 +1,11 @@
+# Go binaries
+bin/
+api
+*.exe
+*.test
+*.out
+
+# Env
+.env
+.env.*
+!.env.example
