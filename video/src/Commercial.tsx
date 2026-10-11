@@ -1,12 +1,13 @@
 import React from 'react';
 import { Sequence } from 'remotion';
 import { TIMELINE } from './config/timeline';
-import { OpeningStatement } from './scenes/OpeningStatement';
-import { LogoIdentity } from './scenes/LogoIdentity';
-import { BrandPromise } from './scenes/BrandPromise';
-import { CareerPathwaysSystem } from './scenes/CareerPathwaysSystem';
-import { PreparationJourneyDiagram } from './scenes/PreparationJourneyDiagram';
-import { BrandFinaleTech } from './scenes/BrandFinaleTech';
+import { ImmediateHook } from './scenes/ImmediateHook';
+import { BrandRevealScene } from './scenes/BrandRevealScene';
+import { ThePromiseScene } from './scenes/ThePromiseScene';
+import { CareerPathwaysFull } from './scenes/CareerPathwaysFull';
+import { LearningInMotionScene } from './scenes/LearningInMotionScene';
+import { ClimaxScene } from './scenes/ClimaxScene';
+import { BrandFinaleCommercial } from './scenes/BrandFinaleCommercial';
 
 export const Commercial: React.FC = () => {
   const { scenes } = TIMELINE;
@@ -21,34 +22,39 @@ export const Commercial: React.FC = () => {
         overflow: 'hidden',
       }}
     >
-      {/* SCENE 01 — OPENING STATEMENT (00:00–00:04 | Frames 0–240) */}
-      <Sequence from={scenes.scene1Opening.start} durationInFrames={scenes.scene1Opening.duration}>
-        <OpeningStatement />
+      {/* 00:00–00:02 — IMMEDIATE HOOK (Frames 0–120) */}
+      <Sequence from={scenes.hook.start} durationInFrames={scenes.hook.duration}>
+        <ImmediateHook />
       </Sequence>
 
-      {/* SCENE 02 — LOGO AND BRAND IDENTITY (00:04–00:07 | Frames 240–420) */}
-      <Sequence from={scenes.scene2Logo.start} durationInFrames={scenes.scene2Logo.duration}>
-        <LogoIdentity />
+      {/* 00:02–00:05 — BRAND REVEAL (Frames 120–300) */}
+      <Sequence from={scenes.brandReveal.start} durationInFrames={scenes.brandReveal.duration}>
+        <BrandRevealScene />
       </Sequence>
 
-      {/* SCENE 03 — BRAND PROMISE (00:07–00:10 | Frames 420–600) */}
-      <Sequence from={scenes.scene3Promise.start} durationInFrames={scenes.scene3Promise.duration}>
-        <BrandPromise />
+      {/* 00:05–00:08 — THE PROMISE (Frames 300–480) */}
+      <Sequence from={scenes.promise.start} durationInFrames={scenes.promise.duration}>
+        <ThePromiseScene />
       </Sequence>
 
-      {/* SCENE 04 — FOUR CAREER PATHWAYS SYSTEM (00:10–00:19 | Frames 600–1140) */}
-      <Sequence from={scenes.scene4Pathways.start} durationInFrames={scenes.scene4Pathways.duration}>
-        <CareerPathwaysSystem />
+      {/* 00:08–00:18 — FOUR CAREER PATHWAYS (Frames 480–1080) */}
+      <Sequence from={scenes.pathways.start} durationInFrames={scenes.pathways.duration}>
+        <CareerPathwaysFull />
       </Sequence>
 
-      {/* SCENE 05 — THE PREPARATION JOURNEY (00:19–00:23 | Frames 1140–1380) */}
-      <Sequence from={scenes.scene5Journey.start} durationInFrames={scenes.scene5Journey.duration}>
-        <PreparationJourneyDiagram />
+      {/* 00:18–00:22 — LEARNING IN MOTION (Frames 1080–1320) */}
+      <Sequence from={scenes.learningMotion.start} durationInFrames={scenes.learningMotion.duration}>
+        <LearningInMotionScene />
       </Sequence>
 
-      {/* SCENE 06 — BRAND FINALE & CLIMAX (00:23–00:28 | Frames 1380–1680) */}
-      <Sequence from={scenes.scene6Finale.start} durationInFrames={scenes.scene6Finale.duration}>
-        <BrandFinaleTech />
+      {/* 00:22–00:25 — BUILD THE CLIMAX (Frames 1320–1500) */}
+      <Sequence from={scenes.climax.start} durationInFrames={scenes.climax.duration}>
+        <ClimaxScene />
+      </Sequence>
+
+      {/* 00:25–00:28 — BRAND FINALE (Frames 1500–1680) */}
+      <Sequence from={scenes.finale.start} durationInFrames={scenes.finale.duration}>
+        <BrandFinaleCommercial />
       </Sequence>
     </div>
   );

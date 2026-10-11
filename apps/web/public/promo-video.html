@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motion Graphics Commercial (28s) — PT. Sejahtera Abadi Bersama</title>
+  <title>Commercial Brand Film (28s) — PT. Sejahtera Abadi Bersama</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
       padding: 0;
     }
     body {
-      background: #03070E;
+      background: #030811;
       color: #F8FAFC;
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       min-height: 100vh;
@@ -45,10 +45,10 @@
       align-items: center;
       gap: 12px;
     }
-    .badge-tech {
+    .badge-live {
       padding: 4px 12px;
-      background: rgba(34, 211, 238, 0.12);
-      border: 1px solid rgba(34, 211, 238, 0.4);
+      background: rgba(34, 211, 238, 0.15);
+      border: 1px solid rgba(34, 211, 238, 0.45);
       color: #22D3EE;
       border-radius: 999px;
       font-size: 11px;
@@ -91,34 +91,34 @@
       background: rgba(255, 255, 255, 0.18);
       transform: translateY(-1px);
     }
-    .btn-cyan {
+    .btn-teal {
       background: #22D3EE;
       border-color: #22D3EE;
-      color: #03070E;
+      color: #030811;
       font-weight: 900;
     }
-    .btn-cyan:hover {
+    .btn-teal:hover {
       background: #38BDF8;
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.55);
+      box-shadow: 0 0 22px rgba(34, 211, 238, 0.6);
     }
     .btn-gold {
-      background: rgba(213, 183, 121, 0.18);
+      background: rgba(213, 183, 121, 0.2);
       border-color: rgba(213, 183, 121, 0.5);
       color: #F4D068;
     }
     .btn-gold:hover {
-      background: rgba(213, 183, 121, 0.32);
+      background: rgba(213, 183, 121, 0.35);
     }
 
-    /* 16:9 Viewport Player */
+    /* 16:9 Cinematic Video Viewport */
     .viewport {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #060F1A;
+      background: #050E1A;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 35px 85px -20px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(34, 211, 238, 0.25);
+      box-shadow: 0 35px 85px -20px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(34, 211, 238, 0.3);
     }
     canvas {
       width: 100%;
@@ -126,11 +126,11 @@
       display: block;
     }
 
-    /* Hero Poster Click-to-Play */
+    /* Dramatic Hero Poster */
     .hero-poster {
       position: absolute;
       inset: 0;
-      background: rgba(3, 7, 14, 0.88);
+      background: rgba(3, 8, 17, 0.88);
       backdrop-filter: blur(14px);
       display: flex;
       flex-direction: column;
@@ -146,24 +146,24 @@
       pointer-events: none;
     }
     .poster-circle {
-      width: 90px;
-      height: 90px;
+      width: 92px;
+      height: 92px;
       border-radius: 50%;
       background: #22D3EE;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 50px rgba(34, 211, 238, 0.7);
+      box-shadow: 0 0 55px rgba(34, 211, 238, 0.75);
       transition: transform 0.2s, background 0.2s;
     }
     .hero-poster:hover .poster-circle {
-      transform: scale(1.08);
+      transform: scale(1.1);
       background: #38BDF8;
     }
     .poster-circle svg {
-      width: 40px;
-      height: 40px;
-      fill: #03070E;
+      width: 42px;
+      height: 42px;
+      fill: #030811;
       margin-left: 4px;
     }
     .poster-text {
@@ -171,7 +171,7 @@
       max-width: 560px;
     }
     .poster-text h2 {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 900;
       color: #F8FAFC;
       letter-spacing: -0.01em;
@@ -183,14 +183,14 @@
       line-height: 1.45;
     }
 
-    /* Player Controls Overlay */
+    /* Controls Overlay */
     .controls-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       padding: 18px 24px;
-      background: linear-gradient(to top, rgba(3, 7, 14, 0.98) 0%, rgba(3, 7, 14, 0.6) 65%, transparent 100%);
+      background: linear-gradient(to top, rgba(3, 8, 17, 0.98) 0%, rgba(3, 8, 17, 0.6) 65%, transparent 100%);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -273,7 +273,7 @@
     .scene-pill:hover, .scene-pill.active {
       background: #22D3EE;
       border-color: #22D3EE;
-      color: #03070E;
+      color: #030811;
     }
     .controls-right {
       display: flex;
@@ -296,23 +296,23 @@
 <body>
 
   <div class="wrapper">
-    <!-- Top Header -->
+    <!-- Header -->
     <div class="header-bar">
       <div class="brand-group">
-        <span class="badge-tech">Minimalist Tech Commercial 28s</span>
+        <span class="badge-live">High-Energy Commercial 28s</span>
         <div class="brand-titles">
           <h1>PT. SEJAHTERA ABADI BERSAMA</h1>
           <p>Mempersiapkan Masa Depan, Membuka Peluang Dunia • Kontak: ratechs.id</p>
         </div>
       </div>
       <div class="nav-actions">
-        <a href="/" class="btn">← Beranda Web</a>
+        <a href="/" class="btn">← Beranda Website</a>
         <a href="/storyboard" class="btn">Galeri Storyboard</a>
-        <a href="/daftar" class="btn btn-cyan">Daftar Sekarang →</a>
+        <a href="/daftar" class="btn btn-teal">Daftar Sekarang →</a>
       </div>
     </div>
 
-    <!-- 16:9 Viewport Player -->
+    <!-- 16:9 Viewport -->
     <div class="viewport" id="viewport">
       <canvas id="canvas" width="1920" height="1080"></canvas>
 
@@ -322,8 +322,8 @@
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
         <div class="poster-text">
-          <h2>Putar Commercial Motion Graphics (28 Detik)</h2>
-          <p>Gaya Minimalist Tech Explainer • Garis Terhubung SVG • Sistem 4 Jalur • 60 FPS Deterministik</p>
+          <h2>Putar Commercial Brand Film (28 Detik)</h2>
+          <p>High-Impact Motion Graphics 60 FPS • Full-Screen Pathways Takeover • Audio Synthesizer Bertenaga</p>
         </div>
       </div>
 
@@ -334,7 +334,7 @@
         </div>
         <div class="controls-row">
           <div class="controls-left">
-            <button class="btn btn-cyan" id="playBtn">▶ Putar</button>
+            <button class="btn btn-teal" id="playBtn">▶ Putar</button>
             <button class="btn" id="resetBtn">↺ Reset</button>
             <button class="btn" id="stepBackBtn" title="Mundur 1 frame">◀ -1f</button>
             <button class="btn" id="stepFwdBtn" title="Maju 1 frame">▶ +1f</button>
@@ -342,21 +342,22 @@
             <span class="time-counter" id="timeCounter">00:00 / 00:28</span>
           </div>
 
-          <!-- Scene Jumpers (Exact 6 Scenes) -->
+          <!-- Scene Navigation Pills (New 28s Edit) -->
           <div class="scene-jumpers">
-            <button class="scene-pill" onclick="seekTime(0)">01. Statement (0-4s)</button>
-            <button class="scene-pill" onclick="seekTime(4)">02. Logo (4-7s)</button>
-            <button class="scene-pill" onclick="seekTime(7)">03. Promise (7-10s)</button>
-            <button class="scene-pill" onclick="seekTime(10)">04. 4 Pathways (10-19s)</button>
-            <button class="scene-pill" onclick="seekTime(19)">05. Journey (19-23s)</button>
-            <button class="scene-pill" onclick="seekTime(23)">06. Finale (23-28s)</button>
+            <button class="scene-pill" onclick="seekTime(0)">01. Hook (0-2s)</button>
+            <button class="scene-pill" onclick="seekTime(2)">02. Reveal (2-5s)</button>
+            <button class="scene-pill" onclick="seekTime(5)">03. Promise (5-8s)</button>
+            <button class="scene-pill" onclick="seekTime(8)">04. 4 Pathways (8-18s)</button>
+            <button class="scene-pill" onclick="seekTime(18)">05. Learning (18-22s)</button>
+            <button class="scene-pill" onclick="seekTime(22)">06. Climax (22-25s)</button>
+            <button class="scene-pill" onclick="seekTime(25)">07. Finale (25-28s)</button>
           </div>
 
           <div class="controls-right">
             <div class="export-label" id="exportLabel">
-              <span>Merekam: <span id="exportProgress">0%</span></span>
+              <span>Merekam MP4: <span id="exportProgress">0%</span></span>
             </div>
-            <button class="btn btn-gold" id="exportBtn">📥 Unduh Video (MP4)</button>
+            <button class="btn btn-gold" id="exportBtn">📥 Unduh Video Standalone (MP4)</button>
             <button class="btn" id="audioToggle">🔊 Audio: On</button>
             <button class="btn" id="fsBtn">⛶ Layar Penuh</button>
           </div>
@@ -364,50 +365,65 @@
       </div>
     </div>
 
-    <!-- Storyboard Keyframe Review Inspector (Alat Bantu Referensi di Bawah Video) -->
+    <!-- Storyboard Keyframe Review Inspector (Alat Bantu Opsional di Bawah Video) -->
     <div style="background: rgba(11, 27, 47, 0.45); border: 1px solid rgba(34, 211, 238, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
       <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
         <div>
-          <h3 style="font-size: 15px; font-weight: 800; color: #F8FAFC;">Storyboard Keyframe Reference (6 Scenes)</h3>
-          <p style="font-size: 12px; color: #8FA8BF;">Inspeksi visual per frame kunci dalam format minimalist dark technical motion design.</p>
+          <h3 style="font-size: 15px; font-weight: 800; color: #F8FAFC;">Storyboard Keyframe Review (New Dynamic Edit)</h3>
+          <p style="font-size: 12px; color: #8FA8BF;">Klik tombol untuk meninjau titik waktu tertentu pada kanvas 1920 × 1080 @ 60 FPS.</p>
         </div>
-        <a href="/storyboard" class="btn" style="text-decoration: none;">Buka Storyboard Lengkap →</a>
+        <a href="/storyboard" class="btn" style="text-decoration: none;">Buka Galeri Storyboard Penuh →</a>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px;">
-        <div onclick="seekTime(1.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 01 • 00:01.5s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">KETERAMPILAN</div>
-          <div style="font-size: 11px; color: #8FA8BF;">Light Path Drawing</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px;">
+        <div onclick="seekTime(0.8)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">00:00.8s • Frame 48</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">IMMEDIATE HOOK</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Pertanyaan Dinamis</div>
         </div>
-        <div onclick="seekTime(5.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 02 • 00:05.2s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">LOGO IDENTITY</div>
-          <div style="font-size: 11px; color: #8FA8BF;">Official Symbol & Sweep</div>
+        <div onclick="seekTime(3.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">00:03.2s • Frame 192</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">BRAND REVEAL</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Logo LPK & Light Trail</div>
         </div>
-        <div onclick="seekTime(8.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 03 • 00:08.2s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">BRAND PROMISE</div>
-          <div style="font-size: 11px; color: #8FA8BF;">Masa Depan & Peluang Dunia</div>
+        <div onclick="seekTime(6.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">00:06.5s • Frame 390</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">THE PROMISE</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Keterampilan & Peluang</div>
         </div>
-        <div onclick="seekTime(11.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #38BDF8;">SCENE 04 • 00:11.2s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">01. JEPANG & KOREA</div>
-          <div style="font-size: 11px; color: #8FA8BF;">Sequential Active Nodes</div>
+        <div onclick="seekTime(9.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #E11D48;">00:09.2s • Frame 552</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">🇯🇵 JEPANG</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Tokutei Ginou • JFT A2</div>
         </div>
-        <div onclick="seekTime(15.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #FBBF24;">SCENE 04 • 00:15.5s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">02. WELDING & KAIGO</div>
-          <div style="font-size: 11px; color: #8FA8BF;">SMAW/GMAW & Caregiver</div>
+        <div onclick="seekTime(11.8)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #2563EB;">00:11.8s • Frame 708</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">🇰🇷 KOREA</div>
+          <div style="font-size: 11px; color: #8FA8BF;">EPS-TOPIK • G-to-G</div>
         </div>
-        <div onclick="seekTime(20.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 05 • 00:20.5s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">JOURNEY DIAGRAM</div>
-          <div style="font-size: 11px; color: #8FA8BF;">Belajar → Berlatih → Siap</div>
+        <div onclick="seekTime(14.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #D97706;">00:14.2s • Frame 852</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">⚡ WELDING</div>
+          <div style="font-size: 11px; color: #8FA8BF;">SMAW/GMAW 3G/4G</div>
         </div>
-        <div onclick="seekTime(25.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
-          <div style="font-size: 10px; font-weight: 800; color: #D5B779;">SCENE 06 • 00:25.5s</div>
-          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">BRAND FINALE</div>
+        <div onclick="seekTime(16.8)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #059669;">00:16.8s • Frame 1008</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">🩺 CAREGIVER</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Kaigo • Etika Medis</div>
+        </div>
+        <div onclick="seekTime(20.0)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">00:20.0s • Frame 1200</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">LEARNING</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Belajar • Berlatih • Siap</div>
+        </div>
+        <div onclick="seekTime(23.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">00:23.5s • Frame 1410</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">CLIMAX</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Montase Kecepatan Tinggi</div>
+        </div>
+        <div onclick="seekTime(26.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #D5B779;">00:26.5s • Frame 1590</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">FINALE</div>
           <div style="font-size: 11px; color: #8FA8BF;">CTA ratechs.id</div>
         </div>
       </div>
@@ -455,7 +471,7 @@
     logoImg.onload = () => { logoLoaded = true; };
 
     // ==========================================
-    // RESTRAINED TECH COMMERCIAL SOUND DESIGN
+    // CRITICAL AUDIO MIX: BOOSTED & NORMALIZED (~ -16 LUFS)
     // ==========================================
     function setupAudio() {
       if (!audioCtx) {
@@ -463,14 +479,15 @@
         mediaDestNode = audioCtx.createMediaStreamDestination();
 
         masterCompressor = audioCtx.createDynamicsCompressor();
-        masterCompressor.threshold.setValueAtTime(-14, audioCtx.currentTime);
-        masterCompressor.knee.setValueAtTime(30, audioCtx.currentTime);
+        masterCompressor.threshold.setValueAtTime(-12, audioCtx.currentTime);
+        masterCompressor.knee.setValueAtTime(25, audioCtx.currentTime);
         masterCompressor.ratio.setValueAtTime(4.0, audioCtx.currentTime);
-        masterCompressor.attack.setValueAtTime(0.005, audioCtx.currentTime);
-        masterCompressor.release.setValueAtTime(0.25, audioCtx.currentTime);
+        masterCompressor.attack.setValueAtTime(0.003, audioCtx.currentTime);
+        masterCompressor.release.setValueAtTime(0.20, audioCtx.currentTime);
 
+        // Boosted Master Gain for Professional Commercial Sound Pressure
         masterGain = audioCtx.createGain();
-        masterGain.gain.setValueAtTime(0.85, audioCtx.currentTime);
+        masterGain.gain.setValueAtTime(1.35, audioCtx.currentTime);
 
         masterCompressor.connect(masterGain);
         masterGain.connect(audioCtx.destination);
@@ -488,436 +505,544 @@
       node.connect(masterCompressor);
     }
 
-    // Soft Tonal Brand Note
-    function playTonalChime(freq, gainLevel = 0.08) {
+    // Heavy 808 Sub-Boom Impact (Boosted)
+    function playSubBoomImpact() {
       if (!isAudioOn || !audioCtx) return;
       const now = audioCtx.currentTime;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now);
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(gainLevel, now + 0.04);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.6);
+        osc.frequency.setValueAtTime(145, now);
+        osc.frequency.exponentialRampToValueAtTime(36, now + 0.45);
+        gain.gain.setValueAtTime(0.65, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
         osc.connect(gain);
         routeSound(gain);
         osc.start(now);
-        osc.stop(now + 1.7);
+        osc.stop(now + 0.9);
       } catch (e) {}
     }
 
-    // Node Activation Pulse
-    function playNodePulse(freq = 520) {
+    // FM Rhodes Synth Chord (Boosted to 0.22)
+    function playRhodesChord(freqs, gainLevel = 0.22) {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      freqs.forEach((freq, i) => {
+        try {
+          const carrier = audioCtx.createOscillator();
+          const mod = audioCtx.createOscillator();
+          const modGain = audioCtx.createGain();
+          const carrierGain = audioCtx.createGain();
+
+          carrier.type = 'sine';
+          carrier.frequency.setValueAtTime(freq, now);
+
+          mod.type = 'triangle';
+          mod.frequency.setValueAtTime(freq * 2.0, now);
+
+          modGain.gain.setValueAtTime(freq * 0.9, now);
+          modGain.gain.exponentialRampToValueAtTime(1.0, now + 1.2);
+
+          mod.connect(modGain);
+          modGain.connect(carrier.frequency);
+
+          carrierGain.gain.setValueAtTime(0.001, now);
+          carrierGain.gain.linearRampToValueAtTime(gainLevel, now + 0.03 + i * 0.015);
+          carrierGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
+
+          carrier.connect(carrierGain);
+          routeSound(carrierGain);
+
+          carrier.start(now + i * 0.015);
+          mod.start(now + i * 0.015);
+          carrier.stop(now + 1.9);
+          mod.stop(now + 1.9);
+        } catch (e) {}
+      });
+    }
+
+    // Warm Low-Pass Pad (Boosted to 0.14)
+    function playAtmosphericPad(freq, duration = 2.4, gainLevel = 0.14) {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      [-3.0, 0, 3.0].forEach(detune => {
+        try {
+          const osc = audioCtx.createOscillator();
+          const filter = audioCtx.createBiquadFilter();
+          const gain = audioCtx.createGain();
+
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(freq, now);
+          osc.detune.setValueAtTime(detune, now);
+
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(800, now);
+          filter.frequency.linearRampToValueAtTime(1500, now + duration * 0.5);
+          filter.frequency.linearRampToValueAtTime(700, now + duration);
+
+          gain.gain.setValueAtTime(0.001, now);
+          gain.gain.linearRampToValueAtTime(gainLevel, now + 0.35);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+          osc.connect(filter);
+          filter.connect(gain);
+          routeSound(gain);
+
+          osc.start(now);
+          osc.stop(now + duration);
+        } catch (e) {}
+      });
+    }
+
+    // Punchy Acoustic Kick (Boosted to 0.70)
+    function triggerKick() {
       if (!isAudioOn || !audioCtx) return;
       const now = audioCtx.currentTime;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(freq, now);
-        gain.gain.setValueAtTime(0.06, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+        osc.frequency.setValueAtTime(165, now);
+        osc.frequency.exponentialRampToValueAtTime(42, now + 0.12);
+        gain.gain.setValueAtTime(0.70, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
         osc.connect(gain);
         routeSound(gain);
         osc.start(now);
-        osc.stop(now + 0.2);
+        osc.stop(now + 0.36);
       } catch (e) {}
     }
 
-    // Dark Ambient Drone
-    function playAmbientBed(freq = 110, duration = 3.0) {
+    // Studio Snare & Clap (Boosted to 0.50)
+    function triggerSnare() {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      try {
+        const size = audioCtx.sampleRate * 0.18;
+        const buffer = audioCtx.createBuffer(1, size, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < size; i++) data[i] = Math.random() * 2 - 1;
+
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.setValueAtTime(1400, now);
+
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.50, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
+
+        noise.connect(filter);
+        filter.connect(gain);
+        routeSound(gain);
+        noise.start(now);
+
+        const osc = audioCtx.createOscillator();
+        const oscGain = audioCtx.createGain();
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.exponentialRampToValueAtTime(115, now + 0.08);
+        oscGain.gain.setValueAtTime(0.40, now);
+        oscGain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+        osc.connect(oscGain);
+        routeSound(oscGain);
+        osc.start(now);
+        osc.stop(now + 0.11);
+      } catch (e) {}
+    }
+
+    // Metallic Hi-Hat (Boosted to 0.18)
+    function triggerHat(open = false) {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      try {
+        const size = audioCtx.sampleRate * (open ? 0.24 : 0.05);
+        const buffer = audioCtx.createBuffer(1, size, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < size; i++) data[i] = Math.random() * 2 - 1;
+
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.setValueAtTime(7500, now);
+
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(open ? 0.20 : 0.14, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + (open ? 0.22 : 0.04));
+
+        noise.connect(filter);
+        filter.connect(gain);
+        routeSound(gain);
+        noise.start(now);
+      } catch (e) {}
+    }
+
+    // Transition Riser / Whoosh (Boosted to 0.28)
+    function triggerWhoosh() {
       if (!isAudioOn || !audioCtx) return;
       const now = audioCtx.currentTime;
       try {
         const osc = audioCtx.createOscillator();
         const filter = audioCtx.createBiquadFilter();
         const gain = audioCtx.createGain();
+
         osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(freq, now);
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(450, now);
+        osc.frequency.setValueAtTime(110, now);
+        osc.frequency.exponentialRampToValueAtTime(850, now + 0.55);
+
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(320, now);
+        filter.frequency.exponentialRampToValueAtTime(3200, now + 0.55);
+
         gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.04, now + 0.5);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        gain.gain.linearRampToValueAtTime(0.25, now + 0.35);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.65);
+
         osc.connect(filter);
         filter.connect(gain);
         routeSound(gain);
         osc.start(now);
-        osc.stop(now + duration);
+        osc.stop(now + 0.65);
       } catch (e) {}
     }
 
-    // Subtle Percussive Click / Pulse
-    function playSubtleClick() {
-      if (!isAudioOn || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      try {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.frequency.setValueAtTime(140, now);
-        osc.frequency.exponentialRampToValueAtTime(48, now + 0.08);
-        gain.gain.setValueAtTime(0.18, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
-        osc.connect(gain);
-        routeSound(gain);
-        osc.start(now);
-        osc.stop(now + 0.16);
-      } catch (e) {}
-    }
-
-    // Audio Sync Master
+    // Timeline Synchronizer @ 108 BPM (Chords: Cmaj7 -> Am7 -> Fmaj7 -> G7)
     let lastAudioStep = -1;
     function syncSoundtrack(t) {
       if (!isPlaying) return;
-      const bpm = 100;
+      const bpm = 108;
       const step = Math.floor(t * (bpm / 60) * 2);
       if (step !== lastAudioStep) {
         lastAudioStep = step;
+        const measure = Math.floor(step / 8);
 
-        // Ambient chords
+        const chords = [
+          [261.63, 329.63, 392.00, 493.88], // Cmaj7
+          [220.00, 261.63, 329.63, 392.00], // Am7
+          [174.61, 220.00, 261.63, 329.63], // Fmaj7
+          [196.00, 246.94, 293.66, 349.23]  // G7
+        ];
+        const chord = chords[measure % 4];
+
         if (step % 8 === 0) {
-          const chords = [261.63, 220.00, 174.61, 196.00];
-          const c = chords[Math.floor(step / 8) % 4];
-          playTonalChime(c, 0.07);
-          playAmbientBed(c * 0.5, 2.5);
+          playRhodesChord(chord, 0.22);
+          playAtmosphericPad(chord[0], 2.4, 0.14);
         }
 
-        // Node activation pulses in Scene 4 & 5
-        if ((t >= 10 && t < 19 && step % 4 === 0) || (t >= 19 && t < 23 && step % 4 === 0)) {
-          playNodePulse(440 + (step % 4) * 80);
-          playSubtleClick();
+        // Drum groove
+        if (t >= 2.0) {
+          if (step % 8 === 0 || step % 8 === 4) triggerKick();
+          if (step % 8 === 2 || step % 8 === 6) triggerSnare();
+          if (step % 2 === 0) triggerHat(step % 8 === 7);
         }
 
-        // Final resolution chime
-        if (Math.abs(t - 23.5) < 0.05) {
-          playTonalChime(523.25, 0.12);
+        // Scene transition cues
+        if (Math.abs(t - 1.95) < 0.05 || Math.abs(t - 4.95) < 0.05 || Math.abs(t - 7.95) < 0.05 || Math.abs(t - 17.95) < 0.05 || Math.abs(t - 21.95) < 0.05 || Math.abs(t - 24.95) < 0.05) {
+          triggerWhoosh();
+          playSubBoomImpact();
         }
       }
     }
 
     // ==========================================
-    // DETERMINISTIC 60 FPS TECH MOTION GRAPHICS
+    // DETERMINISTIC 60 FPS MOTION GRAPHICS
     // ==========================================
     function easeOutCubic(x) { return 1 - Math.pow(1 - x, 3); }
     function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
 
-    // Canvas Background: Near-Black Navy with Subtle Technical Grid
+    // Canvas Background with Cybernetic Grid
     function drawBackground(t) {
-      const grad = ctx.createRadialGradient(960, 540, 80, 960, 540, 1150);
-      grad.addColorStop(0, '#0B1B2F');
-      grad.addColorStop(0.6, '#060F1A');
-      grad.addColorStop(1, '#03070E');
+      const grad = ctx.createRadialGradient(960, 540, 60, 960, 540, 1150);
+      grad.addColorStop(0, '#102B49');
+      grad.addColorStop(0.55, '#07111F');
+      grad.addColorStop(1, '#030811');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 1920, 1080);
 
-      // Fine Subtle Blueprint Grid Lines
-      ctx.strokeStyle = 'rgba(34, 211, 238, 0.035)';
-      ctx.lineWidth = 1;
-      const move = (t * 15) % 80;
-      for (let x = move; x < 1920; x += 80) {
+      // Controlled Perspective Grid Lines
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.05)';
+      ctx.lineWidth = 1.2;
+      const offset = (t * 24) % 60;
+      for (let x = offset; x < 1920; x += 60) {
         ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 1080); ctx.stroke();
       }
-      for (let y = move; y < 1080; y += 80) {
+      for (let y = offset; y < 1080; y += 60) {
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1920, y); ctx.stroke();
       }
     }
 
-    // SCENE 01 — OPENING STATEMENT (00:00–00:04 | Frames 0–240)
-    function renderScene1(t) {
-      const p1 = clamp(t / 1.5, 0, 1);
-      const p2 = clamp((t - 1.4) / 1.2, 0, 1);
+    // 00:00–00:02: IMMEDIATE HOOK (Instant Visual Impact, SIAPKAN DIRI UNTUK MASA DEPAN?)
+    function renderHook(t) {
+      const p = clamp(t / 1.0, 0, 1);
+      // Tight opening composition pulls back to reveal environment (1.15 -> 0.98)
+      const pullBack = 1.15 - (t / 2.0) * 0.17;
 
       ctx.save();
+      ctx.translate(960, 540);
+      ctx.scale(pullBack, pullBack);
       ctx.textAlign = 'center';
 
-      // Category Pill
-      ctx.fillStyle = 'rgba(34, 211, 238, 0.15)';
-      ctx.strokeStyle = 'rgba(34, 211, 238, 0.4)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(960 - 150, 320, 300, 34, 17);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = '#22D3EE';
-      ctx.font = '800 13px "Plus Jakarta Sans"';
-      ctx.fillText('FOUNDATIONAL CAPABILITY', 960, 342);
-
-      // Headline 1: KETERAMPILAN
-      ctx.fillStyle = '#F8FAFC';
-      ctx.font = '900 94px "Plus Jakarta Sans"';
-      ctx.letterSpacing = '-0.02em';
-      ctx.globalAlpha = easeOutCubic(p1);
-      ctx.fillText('KETERAMPILAN', 960, 460);
-
-      // Guided Fine Light Path Drawing
-      const lineLen = clamp((t - 0.7) / 1.2, 0, 1) * 540;
+      // Moving Cyan Light Streak
+      const streakProgress = clamp(t / 1.2, 0, 1);
+      const streakLen = streakProgress * 800;
       ctx.strokeStyle = '#22D3EE';
-      ctx.lineWidth = 2;
-      ctx.shadowColor = 'rgba(34, 211, 238, 0.8)';
-      ctx.shadowBlur = 12;
+      ctx.lineWidth = 3;
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
+      ctx.shadowBlur = 18;
       ctx.beginPath();
-      ctx.moveTo(960 - lineLen / 2, 505);
-      ctx.lineTo(960 + lineLen / 2, 505);
+      ctx.moveTo(-streakLen / 2, 40);
+      ctx.lineTo(streakLen / 2, 40);
       ctx.stroke();
       ctx.shadowBlur = 0;
 
-      // Headline 2: UNTUK MASA DEPAN
+      // Category Pill
       ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 20px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.2em';
+      ctx.fillText('PROGRAM PERSIAPAN KARIER GLOBAL', 0, -80);
+
+      // Question Headline
+      ctx.fillStyle = '#F8FAFC';
       ctx.font = '900 84px "Plus Jakarta Sans"';
       ctx.letterSpacing = '-0.02em';
-      ctx.globalAlpha = easeOutCubic(p2);
-      ctx.fillText('UNTUK MASA DEPAN', 960, 615);
+      ctx.fillText('SIAPKAN DIRI UNTUK MASA DEPAN?', 0, 0);
 
       ctx.restore();
     }
 
-    // SCENE 02 — LOGO AND BRAND IDENTITY (00:04–00:07 | Frames 240–420)
-    function renderScene2(t) {
-      const st = t - 4.0;
-      const p = clamp(st / 1.2, 0, 1);
-      const sc = 0.88 + 0.12 * easeOutCubic(p);
+    // 00:02–00:05: BRAND REVEAL (Graphic Wipe, Official Logo, PT. SEJAHTERA ABADI BERSAMA)
+    function renderBrandReveal(t) {
+      const st = t - 2.0;
+      const camZoom = 0.92 + (st / 3.0) * 0.12;
 
       ctx.save();
-      ctx.translate(960, 430);
-      ctx.scale(sc, sc);
+      ctx.translate(960, 420);
+      ctx.scale(camZoom, camZoom);
 
-      // Cyan Aura
-      const aura = ctx.createRadialGradient(0, 0, 40, 0, 0, 260);
-      aura.addColorStop(0, 'rgba(34, 211, 238, 0.35)');
+      // Radial Volumetric Aura
+      const aura = ctx.createRadialGradient(0, 0, 50, 0, 0, 300);
+      aura.addColorStop(0, 'rgba(34, 211, 238, 0.45)');
+      aura.addColorStop(0.65, 'rgba(213, 183, 121, 0.15)');
       aura.addColorStop(1, 'rgba(34, 211, 238, 0)');
       ctx.fillStyle = aura;
       ctx.beginPath();
-      ctx.arc(0, 0, 260, 0, Math.PI * 2);
+      ctx.arc(0, 0, 300, 0, Math.PI * 2);
       ctx.fill();
 
-      // Logo Substrate
+      // Card Base for Logo
       ctx.fillStyle = '#FFFFFF';
       ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
-      ctx.shadowBlur = 40;
+      ctx.shadowBlur = 45;
       ctx.beginPath();
-      ctx.roundRect(-100, -100, 200, 200, 32);
+      ctx.roundRect(-120, -120, 240, 240, 38);
       ctx.fill();
       ctx.shadowBlur = 0;
 
       if (logoLoaded) {
-        ctx.drawImage(logoImg, -82, -82, 164, 164);
+        ctx.drawImage(logoImg, -100, -100, 200, 200);
       }
 
-      // Directional Light Sweep
-      if (st >= 0.5 && st <= 1.8) {
-        const sw = (st - 0.5) / 1.3;
-        const swX = -180 + sw * 360;
-        const swGrad = ctx.createLinearGradient(swX - 40, -100, swX + 40, 100);
+      // Light Sweep
+      if (st >= 0.6 && st <= 2.2) {
+        const sw = (st - 0.6) / 1.6;
+        const swX = -200 + sw * 400;
+        const swGrad = ctx.createLinearGradient(swX - 40, -120, swX + 40, 120);
         swGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
-        swGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.5)');
+        swGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.55)');
         swGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
         ctx.fillStyle = swGrad;
         ctx.beginPath();
-        ctx.roundRect(-100, -100, 200, 200, 32);
+        ctx.roundRect(-120, -120, 240, 240, 38);
         ctx.fill();
       }
 
       ctx.restore();
 
-      // Brand Name
-      const textP = clamp((st - 0.7) / 1.0, 0, 1);
+      // Company Name Reveal
       ctx.save();
-      ctx.globalAlpha = easeOutCubic(textP);
       ctx.textAlign = 'center';
 
       ctx.fillStyle = '#22D3EE';
-      ctx.font = '800 16px "Plus Jakarta Sans"';
+      ctx.font = '800 18px "Plus Jakarta Sans"';
       ctx.letterSpacing = '0.15em';
-      ctx.fillText('LEMBAGA PELATIHAN KERJA RESMI', 960, 640);
+      ctx.fillText('LEMBAGA PELATIHAN KERJA RESMI', 960, 650);
 
       ctx.fillStyle = '#F8FAFC';
-      ctx.font = '900 56px "Plus Jakarta Sans"';
+      ctx.font = '900 62px "Plus Jakarta Sans"';
       ctx.letterSpacing = '-0.02em';
-      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 715);
+      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 725);
       ctx.restore();
     }
 
-    // SCENE 03 — BRAND PROMISE (00:07–00:10 | Frames 420–600)
-    function renderScene3(t) {
-      const st = t - 7.0;
-      const p1 = clamp(st / 1.0, 0, 1);
-      const p2 = clamp((st - 0.8) / 1.0, 0, 1);
-
+    // 00:05–00:08: THE PROMISE (KETERAMPILAN HARI INI -> PELUANG ESOK HARI)
+    function renderPromise(t) {
+      const st = t - 5.0;
       ctx.save();
       ctx.textAlign = 'center';
 
-      // Line 1
+      // Part 1: KETERAMPILAN HARI INI
       ctx.fillStyle = '#F8FAFC';
-      ctx.font = '800 58px "Plus Jakarta Sans"';
-      ctx.globalAlpha = easeOutCubic(p1);
-      ctx.fillText('Mempersiapkan Masa Depan,', 960, 420);
+      ctx.font = '900 78px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText('KETERAMPILAN HARI INI.', 960, 420);
 
-      // Guided Vector Line
-      const lineLen = clamp((st - 0.5) / 1.2, 0, 1) * 780;
+      // Connected Cyan Vector Line
+      const lineLen = clamp((st - 0.4) / 1.2, 0, 1) * 840;
       ctx.strokeStyle = '#22D3EE';
-      ctx.lineWidth = 2;
-      ctx.shadowColor = 'rgba(34, 211, 238, 0.8)';
-      ctx.shadowBlur = 14;
+      ctx.lineWidth = 3;
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
+      ctx.shadowBlur = 16;
       ctx.beginPath();
       ctx.moveTo(960 - lineLen / 2, 470);
       ctx.lineTo(960 + lineLen / 2, 470);
       ctx.stroke();
       ctx.shadowBlur = 0;
 
-      // Line 2 (Cyan Highlight)
+      // Part 2: PELUANG ESOK HARI
       ctx.fillStyle = '#22D3EE';
-      ctx.font = '900 66px "Plus Jakarta Sans"';
-      ctx.globalAlpha = easeOutCubic(p2);
-      ctx.fillText('Membuka Peluang Dunia.', 960, 560);
+      ctx.font = '900 84px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText('PELUANG ESOK HARI.', 960, 560);
 
-      ctx.fillStyle = '#8FA8BF';
-      ctx.font = '600 22px "Plus Jakarta Sans"';
-      ctx.fillText('Standar Kompetensi Kerja Terarah • Kurikulum Bahasa Asing & Kejuruan Vokasi', 960, 640);
       ctx.restore();
     }
 
-    // SCENE 04 — FOUR CAREER PATHWAYS SYSTEM (00:10–00:19 | Frames 600–1140)
-    function renderScene4(t) {
-      const st = t - 10.0;
-      const activeIdx = Math.min(3, Math.floor(st / 2.25));
+    // 00:08–00:18: FOUR CAREER PATHWAYS (FULL-SCREEN TAKEOVER FOR EACH PROGRAM!)
+    function renderPathways(t) {
+      const st = t - 8.0;
 
-      ctx.save();
-      ctx.textAlign = 'center';
-
-      // Header
-      ctx.fillStyle = '#22D3EE';
-      ctx.font = '800 14px "Plus Jakarta Sans"';
-      ctx.letterSpacing = '0.2em';
-      ctx.fillText('CONNECTED CAREER SYSTEM', 960, 190);
-
-      ctx.fillStyle = '#F8FAFC';
-      ctx.font = '900 48px "Plus Jakarta Sans"';
-      ctx.fillText('EMPAT JALUR PELATIHAN PROFESIONAL', 960, 245);
-
-      const nodes = [
-        { step: '01', country: 'JEPANG', prog: 'TOKUTEI GINOU', det: 'JFT A2 / N4 • Budaya Hourensou', icon: '🇯🇵', color: '#22D3EE' },
-        { step: '02', country: 'KOREA', prog: 'EPS-TOPIK', det: 'PROGRAM G-TO-G • UBT Komputer', icon: '🇰🇷', color: '#38BDF8' },
-        { step: '03', country: 'WELDING', prog: 'SMAW / GMAW', det: '3G / 4G • Standar K3 Bengkel', icon: '⚡', color: '#FBBF24' },
-        { step: '04', country: 'CAREGIVER', prog: 'KAIGO', det: 'Pendampingan Lansia Profesional', icon: '🩺', color: '#34D399' }
+      const programs = [
+        {
+          start: 0, end: 2.5,
+          title: 'BAHASA JEPANG & TOKUTEI GINOU',
+          sub: 'Penguasaan JFT-Basic A2, JLPT N4 & Budaya Kerja Industri Hourensou',
+          tag: 'JEPANG • VOKASI & BAHASA',
+          icon: '🇯🇵',
+          color: '#E11D48',
+          watermark: '日本',
+          detail: 'Bimbingan intensif percakapan kerja (Kaiwa) & simulasi ujian resmi'
+        },
+        {
+          start: 2.5, end: 5.0,
+          title: 'BAHASA KOREA & EPS-TOPIK G-TO-G',
+          sub: 'Program Pemerintah G-to-G: Penempatan Sektor Manufaktur dengan Drilling UBT Komputer',
+          tag: 'KOREA SELATAN • G-TO-G',
+          icon: '🇰🇷',
+          color: '#2563EB',
+          watermark: '한국',
+          detail: 'Latihan listening, reading, tes keterampilan fisik & wawancara'
+        },
+        {
+          start: 5.0, end: 7.5,
+          title: 'PELATIHAN PENGELASAN VOKASI',
+          sub: 'Teknik Pengelasan 3G/4G SMAW & GMAW: Bersertifikasi K3 & Standar Pengujian Visual',
+          tag: 'INDUSTRI MANUFAKTUR • TEKNIK',
+          icon: '⚡',
+          color: '#D97706',
+          watermark: 'WELD',
+          detail: '70% Praktik bengkel kerja intensif plat dan pipa bersertifikat'
+        },
+        {
+          start: 7.5, end: 10.0,
+          title: 'CAREGIVER & KAIGO INTERNASIONAL',
+          sub: 'Pendampingan Lansia Profesional: Etika Pelayanan Medis, Body Mechanics & Komunikasi Empati',
+          tag: 'KESEHATAN LANSIA • KAIGO',
+          icon: '🩺',
+          color: '#059669',
+          watermark: 'CARE',
+          detail: 'Keahlian pendampingan berstandar keselamatan global'
+        }
       ];
 
-      // Sequential Connecting Line
-      const linePct = clamp(st / 8.0, 0, 1);
-      ctx.strokeStyle = 'rgba(34, 211, 238, 0.2)';
-      ctx.lineWidth = 2;
+      const current = programs.find(p => st >= p.start && st < p.end) || programs[3];
+      const localT = st - current.start;
+      const enterP = clamp(localT / 0.45, 0, 1);
+      const exitP = clamp((2.5 - localT) / 0.35, 0, 1);
+      const sceneWeight = easeOutCubic(enterP) * easeOutCubic(exitP);
+
+      const camZoom = 0.94 + (localT / 2.5) * 0.11;
+      const camX = -25 + (localT / 2.5) * 50;
+
+      ctx.save();
+      ctx.globalAlpha = sceneWeight;
+      ctx.translate(960 + camX, 540);
+      ctx.scale(camZoom, camZoom);
+      ctx.textAlign = 'center';
+
+      // Massive 3D Background Shadow Watermark
+      ctx.font = '900 280px "Plus Jakarta Sans"';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+      ctx.lineWidth = 3;
+      ctx.strokeText(current.watermark, 0, 90);
+
+      // Large Meaningful Line Icon
+      ctx.font = '96px sans-serif';
+      ctx.fillText(current.icon, 0, -110);
+
+      // Category Pill
+      ctx.fillStyle = current.color;
       ctx.beginPath();
-      ctx.moveTo(380, 480);
-      ctx.lineTo(1540, 480);
-      ctx.stroke();
+      ctx.roundRect(-240, -50, 480, 46, 23);
+      ctx.fill();
 
-      ctx.strokeStyle = '#22D3EE';
-      ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
-      ctx.shadowBlur = 10;
-      ctx.beginPath();
-      ctx.moveTo(380, 480);
-      ctx.lineTo(380 + linePct * (1540 - 380), 480);
-      ctx.stroke();
-      ctx.shadowBlur = 0;
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '800 18px "Plus Jakarta Sans"';
+      ctx.fillText(current.tag, 0, -20);
 
-      // 4 Node Panels
-      nodes.forEach((n, i) => {
-        const isCurrent = (i === activeIdx);
-        const isPassed = (i <= activeIdx);
-        const cx = 380 + i * (1160 / 3);
-        const cy = 560;
+      // Giant Program Title
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 66px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText(current.title, 0, 60);
 
-        ctx.save();
-        ctx.translate(cx, cy);
+      // Description
+      ctx.fillStyle = '#CBD5E1';
+      ctx.font = '600 26px "Plus Jakarta Sans"';
+      ctx.fillText(current.sub, 0, 125);
 
-        // Panel Box
-        ctx.fillStyle = isCurrent ? 'rgba(16, 43, 73, 0.85)' : isPassed ? 'rgba(11, 27, 47, 0.6)' : 'rgba(5, 15, 26, 0.4)';
-        ctx.strokeStyle = isCurrent ? n.color : isPassed ? 'rgba(34, 211, 238, 0.4)' : 'rgba(255, 255, 255, 0.08)';
-        ctx.lineWidth = isCurrent ? 2 : 1;
-        ctx.shadowColor = isCurrent ? 'rgba(34, 211, 238, 0.4)' : 'transparent';
-        ctx.shadowBlur = isCurrent ? 25 : 0;
-        ctx.beginPath();
-        ctx.roundRect(-165, -160, 330, 320, 20);
-        ctx.fill();
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-
-        // Step Circle
-        ctx.fillStyle = isCurrent ? n.color : isPassed ? 'rgba(34, 211, 238, 0.2)' : 'rgba(255, 255, 255, 0.08)';
-        ctx.beginPath();
-        ctx.arc(0, -95, 22, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.fillStyle = isCurrent ? '#03070E' : '#F8FAFC';
-        ctx.font = '900 15px "Plus Jakarta Sans"';
-        ctx.fillText(n.step, 0, -89);
-
-        // Icon
-        ctx.font = '40px sans-serif';
-        ctx.fillText(n.icon, 0, -25);
-
-        // Country
-        ctx.fillStyle = isCurrent ? n.color : isPassed ? '#22D3EE' : '#64748B';
-        ctx.font = '800 13px "Plus Jakarta Sans"';
-        ctx.letterSpacing = '0.1em';
-        ctx.fillText(n.country, 0, 30);
-
-        // Program
-        ctx.fillStyle = isCurrent ? '#F8FAFC' : isPassed ? '#E2E8F0' : '#64748B';
-        ctx.font = '900 22px "Plus Jakarta Sans"';
-        ctx.fillText(n.prog, 0, 62);
-
-        // Detail
-        ctx.fillStyle = isCurrent ? '#CBD5E1' : '#64748B';
-        ctx.font = '500 13px "Plus Jakarta Sans"';
-        ctx.fillText(n.det, 0, 95);
-
-        ctx.restore();
-      });
+      // Detail Motif
+      ctx.fillStyle = '#D5B779';
+      ctx.font = '500 22px "Plus Jakarta Sans"';
+      ctx.fillText('✨ ' + current.detail, 0, 180);
 
       ctx.restore();
     }
 
-    // SCENE 05 — THE PREPARATION JOURNEY (00:19–00:23 | Frames 1140–1380)
-    function renderScene5(t) {
-      const st = t - 19.0;
+    // 00:18–00:22: LEARNING IN MOTION (BELAJAR -> BERLATIH -> BERSIAP)
+    function renderLearning(t) {
+      const st = t - 18.0;
       const currentStep = Math.min(2, Math.floor(st / 1.33));
+      const dolly = 0.92 + (st / 4.0) * 0.16;
 
       ctx.save();
+      ctx.translate(960, 540);
+      ctx.scale(dolly, dolly);
       ctx.textAlign = 'center';
 
-      // Header
       ctx.fillStyle = '#22D3EE';
-      ctx.font = '800 14px "Plus Jakarta Sans"';
-      ctx.letterSpacing = '0.2em';
-      ctx.fillText('PROGRESSION FRAMEWORK', 960, 240);
+      ctx.font = '800 22px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.15em';
+      ctx.fillText('PROGRESSION FRAMEWORK', 0, -280);
 
       ctx.fillStyle = '#F8FAFC';
-      ctx.font = '900 50px "Plus Jakarta Sans"';
-      ctx.fillText('ALUR PERSIAPAN KETERAMPILAN', 960, 305);
+      ctx.font = '900 64px "Plus Jakarta Sans"';
+      ctx.fillText('LEARNING IN MOTION', 0, -210);
 
       const steps = [
-        { num: '01', title: 'BELAJAR', sub: 'Teori & Penguasaan Bahasa Asing', icon: '📖', color: '#22D3EE' },
-        { num: '02', title: 'BERLATIH', sub: '70% Praktik Bengkel & Simulasi UBT', icon: '⚙️', color: '#38BDF8' },
-        { num: '03', title: 'MEMPERSIAPKAN DIRI', sub: 'Disiplin Mental, Etos Kerja & Sertifikasi', icon: '🛡️', color: '#D5B779' }
+        { num: '01', title: 'BELAJAR', sub: 'Teori Vokasi & Bahasa Asing', icon: '📖', color: '#22D3EE' },
+        { num: '02', title: 'BERLATIH', sub: '70% Praktik Bengkel & UBT', icon: '⚙️', color: '#38BDF8' },
+        { num: '03', title: 'BERSIAP', sub: 'Disiplin Mental & Sertifikasi', icon: '🛡️', color: '#D5B779' }
       ];
 
-      // Connecting Line
-      const linePct = clamp(st / 3.8, 0, 1);
-      ctx.strokeStyle = 'rgba(34, 211, 238, 0.2)';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(480, 520);
-      ctx.lineTo(1440, 520);
-      ctx.stroke();
-
+      // Connecting Beam
+      const beamProgress = clamp(st / 3.6, 0, 1) * 720;
       ctx.strokeStyle = '#22D3EE';
+      ctx.lineWidth = 4;
       ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
-      ctx.shadowBlur = 12;
+      ctx.shadowBlur = 14;
       ctx.beginPath();
-      ctx.moveTo(480, 520);
-      ctx.lineTo(480 + linePct * (1440 - 480), 520);
+      ctx.moveTo(-360, -30);
+      ctx.lineTo(-360 + beamProgress, -30);
       ctx.stroke();
       ctx.shadowBlur = 0;
 
@@ -925,43 +1050,42 @@
       steps.forEach((s, i) => {
         const isCurrent = (i === currentStep);
         const isPassed = (i <= currentStep);
-        const cx = 480 + i * (960 / 2);
-        const cy = 570;
+        const cx = -360 + i * 360;
+        const cy = -20;
 
         ctx.save();
         ctx.translate(cx, cy);
 
-        // Panel
         ctx.fillStyle = isCurrent ? 'rgba(16, 43, 73, 0.85)' : isPassed ? 'rgba(11, 27, 47, 0.6)' : 'rgba(5, 15, 26, 0.4)';
         ctx.strokeStyle = isCurrent ? s.color : isPassed ? 'rgba(34, 211, 238, 0.4)' : 'rgba(255, 255, 255, 0.08)';
         ctx.lineWidth = isCurrent ? 2 : 1;
         ctx.shadowColor = isCurrent ? 'rgba(34, 211, 238, 0.4)' : 'transparent';
         ctx.shadowBlur = isCurrent ? 25 : 0;
         ctx.beginPath();
-        ctx.roundRect(-180, -130, 360, 260, 24);
+        ctx.roundRect(-155, -120, 310, 240, 22);
         ctx.fill();
         ctx.stroke();
         ctx.shadowBlur = 0;
 
         // Step Orb
-        ctx.fillStyle = isCurrent ? s.color : isPassed ? 'rgba(34, 211, 238, 0.2)' : 'rgba(255, 255, 255, 0.08)';
+        ctx.fillStyle = isCurrent ? s.color : isPassed ? 'rgba(34, 211, 238, 0.25)' : 'rgba(255, 255, 255, 0.08)';
         ctx.beginPath();
-        ctx.arc(0, -75, 24, 0, Math.PI * 2);
+        ctx.arc(0, -65, 24, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = isCurrent ? '#03070E' : '#F8FAFC';
+        ctx.fillStyle = isCurrent ? '#030811' : '#F8FAFC';
         ctx.font = '900 16px "Plus Jakarta Sans"';
-        ctx.fillText(s.num, 0, -68);
+        ctx.fillText(s.num, 0, -58);
 
         ctx.font = '36px sans-serif';
-        ctx.fillText(s.icon, 0, -12);
+        ctx.fillText(s.icon, 0, -5);
 
         ctx.fillStyle = isCurrent ? '#F8FAFC' : isPassed ? '#E2E8F0' : '#64748B';
-        ctx.font = '900 26px "Plus Jakarta Sans"';
-        ctx.fillText(s.title, 0, 40);
+        ctx.font = '900 24px "Plus Jakarta Sans"';
+        ctx.fillText(s.title, 0, 42);
 
         ctx.fillStyle = isCurrent ? '#CBD5E1' : '#64748B';
-        ctx.font = '500 15px "Plus Jakarta Sans"';
+        ctx.font = '500 14px "Plus Jakarta Sans"';
         ctx.fillText(s.sub, 0, 75);
 
         ctx.restore();
@@ -970,70 +1094,99 @@
       ctx.restore();
     }
 
-    // SCENE 06 — BRAND FINALE (00:23–00:28 | Frames 1380–1680)
-    function renderScene6(t) {
-      const st = t - 23.0;
+    // 00:22–00:25: BUILD THE CLIMAX (RAPID HIGH-INTENSITY MONTAGE)
+    function renderClimax(t) {
+      const st = t - 22.0;
+      const beatIdx = Math.min(3, Math.floor(st / 0.75));
+      const localF = (st % 0.75) / 0.75;
+
+      const montage = [
+        { title: 'JEPANG', sub: 'TOKUTEI GINOU • JFT A2', icon: '🇯🇵', color: '#E11D48' },
+        { title: 'KOREA', sub: 'EPS-TOPIK • G-TO-G', icon: '🇰🇷', color: '#2563EB' },
+        { title: 'PENGELASAN', sub: 'WELDING • SMAW/GMAW', icon: '⚡', color: '#D97706' },
+        { title: 'CAREGIVER', sub: 'KAIGO • LANSIA', icon: '🩺', color: '#059669' }
+      ];
+
+      const item = montage[beatIdx];
+      const sc = 0.94 + localF * 0.14;
+
       ctx.save();
+      ctx.translate(960, 540);
+      ctx.scale(sc, sc);
       ctx.textAlign = 'center';
 
-      // Phase 1 (23s - 25s): Headline
-      if (st < 2.0) {
-        const p = clamp(st / 0.8, 0, 1);
-        ctx.globalAlpha = easeOutCubic(p);
+      // Expanding Concentric Rings
+      ctx.strokeStyle = item.color;
+      ctx.lineWidth = 3;
+      ctx.shadowColor = item.color;
+      ctx.shadowBlur = 40;
+      ctx.beginPath();
+      ctx.arc(0, 0, 320, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
 
-        ctx.fillStyle = '#F8FAFC';
-        ctx.font = '900 64px "Plus Jakarta Sans"';
-        ctx.letterSpacing = '-0.02em';
-        ctx.fillText('PERSIAPKAN LANGKAHMU.', 960, 480);
+      ctx.font = '96px sans-serif';
+      ctx.fillText(item.icon, 0, -40);
 
-        ctx.fillStyle = '#22D3EE';
-        ctx.font = '900 56px "Plus Jakarta Sans"';
-        ctx.letterSpacing = '-0.02em';
-        ctx.fillText('BUKA PELUANG MASA DEPAN.', 960, 560);
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 96px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText(item.title, 0, 60);
+
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 28px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.08em';
+      ctx.fillText(item.sub, 0, 125);
+
+      ctx.restore();
+    }
+
+    // 00:25–00:28: BRAND FINALE (OFFICIAL LOGO, TAGLINE, CTA ratechs.id)
+    function renderFinale(t) {
+      const st = t - 25.0;
+      const p = clamp(st / 0.6, 0, 1);
+
+      ctx.save();
+      ctx.globalAlpha = easeOutCubic(p);
+      ctx.textAlign = 'center';
+
+      // Logo
+      if (logoLoaded) {
+        ctx.drawImage(logoImg, 960 - 55, 175, 110, 110);
       }
-      // Phase 2 (25s - 28s): Finale Settle
-      else {
-        const p2 = clamp((st - 2.0) / 0.8, 0, 1);
-        ctx.globalAlpha = easeOutCubic(p2);
 
-        // Logo
-        if (logoLoaded) {
-          ctx.drawImage(logoImg, 960 - 55, 175, 110, 110);
-        }
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 52px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 345);
 
-        ctx.fillStyle = '#F8FAFC';
-        ctx.font = '900 52px "Plus Jakarta Sans"';
-        ctx.letterSpacing = '-0.02em';
-        ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 345);
+      ctx.fillStyle = '#D5B779';
+      ctx.font = '700 24px "Plus Jakarta Sans"';
+      ctx.fillText('“Mempersiapkan Masa Depan, Membuka Peluang Dunia.”', 960, 405);
 
-        ctx.fillStyle = '#D5B779';
-        ctx.font = '700 24px "Plus Jakarta Sans"';
-        ctx.fillText('“Mempersiapkan Masa Depan, Membuka Peluang Dunia.”', 960, 405);
+      // Pulsing CTA Button
+      const pulse = 1 + 0.02 * Math.sin(t * 8);
+      ctx.save();
+      ctx.translate(960, 540);
+      ctx.scale(pulse, pulse);
 
-        // CTA Button
-        const pulse = 1 + 0.02 * Math.sin(t * 8);
-        ctx.save();
-        ctx.translate(960, 540);
-        ctx.scale(pulse, pulse);
+      ctx.fillStyle = '#22D3EE';
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.7)';
+      ctx.shadowBlur = 35;
+      ctx.beginPath();
+      ctx.roundRect(-220, -42, 440, 84, 42);
+      ctx.fill();
 
-        ctx.fillStyle = '#22D3EE';
-        ctx.shadowColor = 'rgba(34, 211, 238, 0.7)';
-        ctx.shadowBlur = 35;
-        ctx.beginPath();
-        ctx.roundRect(-220, -42, 440, 84, 42);
-        ctx.fill();
+      ctx.fillStyle = '#030811';
+      ctx.font = '900 26px "Plus Jakarta Sans"';
+      ctx.shadowBlur = 0;
+      ctx.fillText('DAFTAR SEKARANG →', 0, 10);
+      ctx.restore();
 
-        ctx.fillStyle = '#03070E';
-        ctx.font = '900 26px "Plus Jakarta Sans"';
-        ctx.shadowBlur = 0;
-        ctx.fillText('DAFTAR SEKARANG →', 0, 10);
-        ctx.restore();
-
-        // Contact (ratechs.id - NO PHONE NUMBER)
-        ctx.fillStyle = '#8FA8BF';
-        ctx.font = '600 20px "Plus Jakarta Sans"';
-        ctx.fillText('✉️ Informasi & Pendaftaran Resmi: ratechs.id  (info@ratechs.id)', 960, 710);
-      }
+      // Contact (ratechs.id - NO PHONE NUMBER)
+      ctx.fillStyle = '#8FA8BF';
+      ctx.font = '600 20px "Plus Jakarta Sans"';
+      ctx.fillText('✉️ Informasi & Pendaftaran Resmi: ratechs.id  (info@ratechs.id)', 960, 710);
 
       ctx.restore();
     }
@@ -1043,18 +1196,20 @@
       ctx.clearRect(0, 0, 1920, 1080);
       drawBackground(timeSeconds);
 
-      if (timeSeconds < 4.0) {
-        renderScene1(timeSeconds);
-      } else if (timeSeconds < 7.0) {
-        renderScene2(timeSeconds);
-      } else if (timeSeconds < 10.0) {
-        renderScene3(timeSeconds);
-      } else if (timeSeconds < 19.0) {
-        renderScene4(timeSeconds);
-      } else if (timeSeconds < 23.0) {
-        renderScene5(timeSeconds);
+      if (timeSeconds < 2.0) {
+        renderHook(timeSeconds);
+      } else if (timeSeconds < 5.0) {
+        renderBrandReveal(timeSeconds);
+      } else if (timeSeconds < 8.0) {
+        renderPromise(timeSeconds);
+      } else if (timeSeconds < 18.0) {
+        renderPathways(timeSeconds);
+      } else if (timeSeconds < 22.0) {
+        renderLearning(timeSeconds);
+      } else if (timeSeconds < 25.0) {
+        renderClimax(timeSeconds);
       } else {
-        renderScene6(timeSeconds);
+        renderFinale(timeSeconds);
       }
 
       syncSoundtrack(timeSeconds);
@@ -1089,7 +1244,7 @@
       timeCounter.innerText = str + ' / 00:28';
 
       // Scene Pills Active Sync
-      const cuts = [0, 4, 7, 10, 19, 23];
+      const cuts = [0, 2, 5, 8, 18, 22, 25];
       document.querySelectorAll('.scene-pill').forEach((pill, idx) => {
         const next = cuts[idx + 1] || 28;
         if (currentTime >= cuts[idx] && currentTime < next) {
@@ -1176,7 +1331,8 @@
     });
 
     // ==========================================
-    // CLIENT-SIDE MP4/WEBM VIDEO EXPORT PIPELINE
+    // STANDALONE MP4/WEBM VIDEO EXPORT PIPELINE
+    // (Outputs Clean Standalone 1920x1080 @ 60fps Video Without Any Browser Chrome!)
     // ==========================================
     exportBtn.addEventListener('click', async () => {
       setupAudio();
@@ -1192,9 +1348,11 @@
       isExporting = true;
       recordedBlobs = [];
 
+      // Clean 1920x1080 Canvas Stream @ 60 FPS
       const canvasStream = canvas.captureStream(60);
       const combinedTracks = [...canvasStream.getVideoTracks()];
 
+      // Audio Master Stream
       if (mediaDestNode && mediaDestNode.stream) {
         const audioTracks = mediaDestNode.stream.getAudioTracks();
         if (audioTracks.length > 0) {
@@ -1207,7 +1365,7 @@
         ? 'video/webm;codecs=vp9'
         : 'video/webm';
 
-      mediaRecorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 6000000 });
+      mediaRecorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 8000000 });
 
       mediaRecorder.ondataavailable = (e) => {
         if (e.data && e.data.size > 0) {
@@ -1218,14 +1376,14 @@
       mediaRecorder.onstop = () => {
         isExporting = false;
         exportLabel.classList.remove('active');
-        exportBtn.innerText = '📥 Unduh Video (MP4)';
+        exportBtn.innerText = '📥 Unduh Video Standalone (MP4)';
         exportBtn.disabled = false;
 
         const blob = new Blob(recordedBlobs, { type: 'video/webm' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'PT-Sejahtera-Abadi-Bersama-Tech-Commercial-28s.webm';
+        a.download = 'PT-Sejahtera-Abadi-Bersama-Commercial-28s.mp4';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
