@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 
 export default function KontakPage() {
   const [sent, setSent] = useState(false);
@@ -75,7 +75,7 @@ export default function KontakPage() {
               </div>
               <h3 className="text-lg font-bold text-primary">Pesan Anda Berhasil Terkirim!</h3>
               <p className="text-xs text-slate-600 max-w-sm mx-auto">
-                Staf representatif LPK Sejahtera Abadi akan segera menghubungi Anda kembali melalui WhatsApp atau Email.
+                Staf representatif LPK Sejahtera Abadi akan segera menghubungi Anda kembali melalui Email resmi.
               </p>
             </div>
           ) : (

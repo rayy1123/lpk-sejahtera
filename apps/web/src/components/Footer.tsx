@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock, ShieldCheck } from 'lucide-react';
+import { MapPin, Mail, Clock, ShieldCheck } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -91,6 +91,16 @@ export default function Footer() {
               <li>
                 <Link href="/informasi" className="hover:text-secondary transition-colors">
                   Berita & Pengumuman Resmi
+                </Link>
+              </li>
+              <li>
+                <Link href="/promo-video.html" className="hover:text-secondary transition-colors">
+                  Commercial Brand Film
+                </Link>
+              </li>
+              <li>
+                <Link href="/storyboard" className="hover:text-secondary transition-colors">
+                  Galeri Storyboard (28s)
                 </Link>
               </li>
               <li>

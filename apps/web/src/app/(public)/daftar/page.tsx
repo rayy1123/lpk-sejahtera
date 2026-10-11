@@ -11,7 +11,7 @@ import {
   FileCheck,
   ShieldCheck,
   User,
-  Phone,
+  Mail,
   BookOpen,
 } from 'lucide-react';
 
@@ -220,7 +220,7 @@ export default function PendaftaranPage() {
           {step === 2 && (
             <div className="space-y-5">
               <h3 className="text-base font-bold text-primary flex items-center gap-2">
-                <Phone className="w-4 h-4 text-secondary" />
+                <Mail className="w-4 h-4 text-secondary" />
                 <span>2. Kontak & Riwayat Pendidikan</span>
               </h3>
 

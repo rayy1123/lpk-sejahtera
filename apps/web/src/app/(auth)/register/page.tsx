@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { UserPlus, Lock, Mail, User, Phone, AlertCircle } from 'lucide-react';
+import { UserPlus, Lock, Mail, User, AlertCircle } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
 export default function RegisterPage() {

@@ -108,7 +108,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-[1.15]">
-                Siapkan Keterampilanmu, Raih Peluang Karier Masa Depan.
+                Mempersiapkan Masa Depan, Membuka Peluang Dunia.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
@@ -135,7 +135,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-secondary text-secondary hover:bg-secondary/10 text-base font-semibold shadow-sm transition-all"
                 >
-                  <span>▶ Tonton Video Animasi</span>
+                  <span>▶ Tonton Commercial Brand Film</span>
                 </a>
               </div>
 
