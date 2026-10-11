@@ -9,6 +9,7 @@ const nextConfig = {
       },
     ],
   },
-}
+  // PT. Sejahtera Abadi Bersama production build
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
