@@ -12,7 +12,8 @@ export default function Navbar() {
     { name: 'Beranda', href: '/' },
     { name: 'Profil', href: '/profil' },
     { name: 'Program Pelatihan', href: '/program' },
-    { name: 'Video Animasi', href: '/promo-video.html' },
+    { name: 'Brand Film', href: '/promo-video.html' },
+    { name: 'Storyboard', href: '/storyboard' },
     { name: 'Informasi', href: '/informasi' },
     { name: 'Kontak', href: '/kontak' },
   ];

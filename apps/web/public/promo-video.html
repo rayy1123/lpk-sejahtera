@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Promosi Sinematik — PT. Sejahtera Abadi Bersama (LPK)</title>
+  <title>Motion Graphics Commercial (28s) — PT. Sejahtera Abadi Bersama</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
       padding: 0;
     }
     body {
-      background: #06111E;
-      color: #FFFFFF;
+      background: #03070E;
+      color: #F8FAFC;
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       min-height: 100vh;
       display: flex;
@@ -25,14 +25,14 @@
       padding: 20px 16px;
       overflow-x: hidden;
     }
-    .main-container {
+    .wrapper {
       width: 100%;
-      max-width: 1080px;
+      max-width: 1160px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
-    .top-header {
+    .header-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -40,43 +40,43 @@
       gap: 12px;
       padding: 0 4px;
     }
-    .brand-meta {
+    .brand-group {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    .brand-tag {
-      padding: 4px 10px;
-      background: rgba(22, 166, 161, 0.15);
-      border: 1px solid rgba(22, 166, 161, 0.4);
-      color: #20C5BF;
+    .badge-tech {
+      padding: 4px 12px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.4);
+      color: #22D3EE;
       border-radius: 999px;
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
+      font-weight: 800;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
     .brand-titles h1 {
-      font-size: 17px;
-      font-weight: 800;
-      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 900;
+      color: #F8FAFC;
       letter-spacing: -0.01em;
     }
     .brand-titles p {
-      font-size: 11px;
-      color: #94A3B8;
+      font-size: 12px;
+      color: #8FA8BF;
       font-weight: 500;
     }
-    .header-actions {
+    .nav-actions {
       display: flex;
       align-items: center;
       gap: 8px;
     }
     .btn {
-      background: rgba(255, 255, 255, 0.1);
-      color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #F8FAFC;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 8px 16px;
       border-radius: 10px;
       font-weight: 700;
       font-size: 12px;
@@ -88,36 +88,37 @@
       text-decoration: none;
     }
     .btn:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.18);
       transform: translateY(-1px);
     }
-    .btn-primary {
-      background: #16A6A1;
-      border-color: #16A6A1;
-      color: #FFFFFF;
+    .btn-cyan {
+      background: #22D3EE;
+      border-color: #22D3EE;
+      color: #03070E;
+      font-weight: 900;
     }
-    .btn-primary:hover {
-      background: #19BDB7;
-      box-shadow: 0 0 16px rgba(22, 166, 161, 0.4);
+    .btn-cyan:hover {
+      background: #38BDF8;
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.55);
     }
     .btn-gold {
-      background: rgba(212, 175, 55, 0.2);
-      border-color: rgba(212, 175, 55, 0.5);
+      background: rgba(213, 183, 121, 0.18);
+      border-color: rgba(213, 183, 121, 0.5);
       color: #F4D068;
     }
     .btn-gold:hover {
-      background: rgba(212, 175, 55, 0.35);
+      background: rgba(213, 183, 121, 0.32);
     }
 
-    /* Video Player Canvas Frame */
-    .video-viewport {
+    /* 16:9 Viewport Player */
+    .viewport {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #091728;
+      background: #060F1A;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(22, 166, 161, 0.25);
+      box-shadow: 0 35px 85px -20px rgba(0, 0, 0, 0.98), 0 0 0 1px rgba(34, 211, 238, 0.25);
     }
     canvas {
       width: 100%;
@@ -125,17 +126,17 @@
       display: block;
     }
 
-    /* Click to Play Hero Poster */
+    /* Hero Poster Click-to-Play */
     .hero-poster {
       position: absolute;
       inset: 0;
-      background: rgba(6, 17, 30, 0.82);
-      backdrop-filter: blur(10px);
+      background: rgba(3, 7, 14, 0.88);
+      backdrop-filter: blur(14px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 18px;
       cursor: pointer;
       z-index: 20;
       transition: opacity 0.35s ease;
@@ -144,52 +145,52 @@
       opacity: 0;
       pointer-events: none;
     }
-    .poster-play-btn {
-      width: 84px;
-      height: 84px;
+    .poster-circle {
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      background: #16A6A1;
+      background: #22D3EE;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 40px rgba(22, 166, 161, 0.7);
+      box-shadow: 0 0 50px rgba(34, 211, 238, 0.7);
       transition: transform 0.2s, background 0.2s;
     }
-    .hero-poster:hover .poster-play-btn {
+    .hero-poster:hover .poster-circle {
       transform: scale(1.08);
-      background: #19BDB7;
+      background: #38BDF8;
     }
-    .poster-play-btn svg {
-      width: 36px;
-      height: 36px;
-      fill: #FFFFFF;
+    .poster-circle svg {
+      width: 40px;
+      height: 40px;
+      fill: #03070E;
       margin-left: 4px;
     }
-    .poster-meta {
+    .poster-text {
       text-align: center;
-      max-width: 500px;
+      max-width: 560px;
     }
-    .poster-meta h2 {
-      font-size: 20px;
-      font-weight: 800;
-      color: #FFFFFF;
+    .poster-text h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #F8FAFC;
       letter-spacing: -0.01em;
     }
-    .poster-meta p {
+    .poster-text p {
       font-size: 13px;
-      color: #94A3B8;
+      color: #8FA8BF;
       margin-top: 6px;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
-    /* Controls Bar Overlay */
-    .video-controls-overlay {
+    /* Player Controls Overlay */
+    .controls-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       padding: 18px 24px;
-      background: linear-gradient(to top, rgba(6, 17, 30, 0.96) 0%, rgba(6, 17, 30, 0.7) 60%, transparent 100%);
+      background: linear-gradient(to top, rgba(3, 7, 14, 0.98) 0%, rgba(3, 7, 14, 0.6) 65%, transparent 100%);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -197,14 +198,14 @@
       transition: opacity 0.25s ease;
       z-index: 30;
     }
-    .video-viewport:hover .video-controls-overlay,
-    .video-controls-overlay.active {
+    .viewport:hover .controls-overlay,
+    .controls-overlay.active {
       opacity: 1;
     }
     .timeline-track {
       width: 100%;
       height: 7px;
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.16);
       border-radius: 999px;
       cursor: pointer;
       position: relative;
@@ -212,7 +213,7 @@
     .timeline-fill {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, #16A6A1, #20C5BF);
+      background: linear-gradient(90deg, #19B8B0, #22D3EE);
       border-radius: 999px;
       position: relative;
     }
@@ -225,14 +226,14 @@
       height: 14px;
       border-radius: 50%;
       background: #FFFFFF;
-      box-shadow: 0 0 10px rgba(32, 197, 191, 0.9);
+      box-shadow: 0 0 10px rgba(34, 211, 238, 0.9);
       opacity: 0;
       transition: opacity 0.15s;
     }
-    .video-viewport:hover .timeline-fill::after {
+    .viewport:hover .timeline-fill::after {
       opacity: 1;
     }
-    .controls-actions {
+    .controls-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -242,117 +243,172 @@
     .controls-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
-    .time-badge {
+    .time-counter {
       font-size: 12px;
-      font-weight: 600;
-      color: #CBD5E1;
+      font-weight: 700;
+      color: #8FA8BF;
       font-variant-numeric: tabular-nums;
+      margin-left: 6px;
     }
-    .scene-navigator {
+    .scene-jumpers {
       display: flex;
       align-items: center;
       gap: 6px;
       overflow-x: auto;
     }
     .scene-pill {
-      padding: 5px 11px;
+      padding: 5px 10px;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #94A3B8;
+      color: #8FA8BF;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.15s;
       white-space: nowrap;
     }
     .scene-pill:hover, .scene-pill.active {
-      background: #16A6A1;
-      border-color: #16A6A1;
-      color: #FFFFFF;
+      background: #22D3EE;
+      border-color: #22D3EE;
+      color: #03070E;
     }
     .controls-right {
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .export-status {
+    .export-label {
       display: none;
       font-size: 11px;
-      color: #20C5BF;
-      font-weight: 700;
+      color: #22D3EE;
+      font-weight: 800;
       align-items: center;
       gap: 6px;
     }
-    .export-status.active {
+    .export-label.active {
       display: flex;
     }
   </style>
 </head>
 <body>
 
-  <div class="main-container">
-    <!-- Header Bar -->
-    <div class="top-header">
-      <div class="brand-meta">
-        <span class="brand-tag">Cinematic Showcase</span>
+  <div class="wrapper">
+    <!-- Top Header -->
+    <div class="header-bar">
+      <div class="brand-group">
+        <span class="badge-tech">Minimalist Tech Commercial 28s</span>
         <div class="brand-titles">
           <h1>PT. SEJAHTERA ABADI BERSAMA</h1>
           <p>Mempersiapkan Masa Depan, Membuka Peluang Dunia • Kontak: ratechs.id</p>
         </div>
       </div>
-      <div class="header-actions">
+      <div class="nav-actions">
         <a href="/" class="btn">← Beranda Web</a>
-        <a href="/daftar" class="btn btn-primary">Daftar Sekarang →</a>
+        <a href="/storyboard" class="btn">Galeri Storyboard</a>
+        <a href="/daftar" class="btn btn-cyan">Daftar Sekarang →</a>
       </div>
     </div>
 
-    <!-- Video Canvas Viewport -->
-    <div class="video-viewport" id="viewport">
+    <!-- 16:9 Viewport Player -->
+    <div class="viewport" id="viewport">
       <canvas id="canvas" width="1920" height="1080"></canvas>
 
       <!-- Click to Play Poster -->
       <div class="hero-poster" id="heroPoster">
-        <div class="poster-play-btn">
+        <div class="poster-circle">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
-        <div class="poster-meta">
-          <h2>Putar Video Promosi Sinematik (28s)</h2>
-          <p>Kualitas Motion Graphics 60fps dengan Audio Synthesizer Prosedural & Format Proporsional 16:9</p>
+        <div class="poster-text">
+          <h2>Putar Commercial Motion Graphics (28 Detik)</h2>
+          <p>Gaya Minimalist Tech Explainer • Garis Terhubung SVG • Sistem 4 Jalur • 60 FPS Deterministik</p>
         </div>
       </div>
 
       <!-- Controls Overlay -->
-      <div class="video-controls-overlay" id="controlsOverlay">
+      <div class="controls-overlay" id="controlsOverlay">
         <div class="timeline-track" id="timelineTrack">
           <div class="timeline-fill" id="timelineFill"></div>
         </div>
-        <div class="controls-actions">
+        <div class="controls-row">
           <div class="controls-left">
-            <button class="btn btn-primary" id="playToggleBtn">▶ Putar</button>
-            <button class="btn" id="restartBtn">↺ Reset</button>
-            <span class="time-badge" id="timeDisplay">00:00 / 00:28</span>
+            <button class="btn btn-cyan" id="playBtn">▶ Putar</button>
+            <button class="btn" id="resetBtn">↺ Reset</button>
+            <button class="btn" id="stepBackBtn" title="Mundur 1 frame">◀ -1f</button>
+            <button class="btn" id="stepFwdBtn" title="Maju 1 frame">▶ +1f</button>
+            <button class="btn" id="capturePngBtn" title="Tangkap PNG 1080p">📸 PNG</button>
+            <span class="time-counter" id="timeCounter">00:00 / 00:28</span>
           </div>
 
-          <!-- Scene Jumper Tabs -->
-          <div class="scene-navigator">
-            <button class="scene-pill" onclick="seekScene(0)">01. Grand Reveal</button>
-            <button class="scene-pill" onclick="seekScene(5)">02. Visi Pelatihan</button>
-            <button class="scene-pill" onclick="seekScene(9)">03. 4 Bidang Kerja</button>
-            <button class="scene-pill" onclick="seekScene(17)">04. Alur Mudah</button>
-            <button class="scene-pill" onclick="seekScene(22)">05. End Card</button>
+          <!-- Scene Jumpers (Exact 6 Scenes) -->
+          <div class="scene-jumpers">
+            <button class="scene-pill" onclick="seekTime(0)">01. Statement (0-4s)</button>
+            <button class="scene-pill" onclick="seekTime(4)">02. Logo (4-7s)</button>
+            <button class="scene-pill" onclick="seekTime(7)">03. Promise (7-10s)</button>
+            <button class="scene-pill" onclick="seekTime(10)">04. 4 Pathways (10-19s)</button>
+            <button class="scene-pill" onclick="seekTime(19)">05. Journey (19-23s)</button>
+            <button class="scene-pill" onclick="seekTime(23)">06. Finale (23-28s)</button>
           </div>
 
           <div class="controls-right">
-            <div class="export-status" id="exportStatus">
+            <div class="export-label" id="exportLabel">
               <span>Merekam: <span id="exportProgress">0%</span></span>
             </div>
-            <button class="btn btn-gold" id="exportVideoBtn">📥 Ekspor Video (MP4)</button>
-            <button class="btn" id="audioToggleBtn">🔊 Audio: On</button>
-            <button class="btn" id="fullscreenBtn">⛶ Fullscreen</button>
+            <button class="btn btn-gold" id="exportBtn">📥 Unduh Video (MP4)</button>
+            <button class="btn" id="audioToggle">🔊 Audio: On</button>
+            <button class="btn" id="fsBtn">⛶ Layar Penuh</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Storyboard Keyframe Review Inspector (Alat Bantu Referensi di Bawah Video) -->
+    <div style="background: rgba(11, 27, 47, 0.45); border: 1px solid rgba(34, 211, 238, 0.25); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h3 style="font-size: 15px; font-weight: 800; color: #F8FAFC;">Storyboard Keyframe Reference (6 Scenes)</h3>
+          <p style="font-size: 12px; color: #8FA8BF;">Inspeksi visual per frame kunci dalam format minimalist dark technical motion design.</p>
+        </div>
+        <a href="/storyboard" class="btn" style="text-decoration: none;">Buka Storyboard Lengkap →</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px;">
+        <div onclick="seekTime(1.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 01 • 00:01.5s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">KETERAMPILAN</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Light Path Drawing</div>
+        </div>
+        <div onclick="seekTime(5.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 02 • 00:05.2s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">LOGO IDENTITY</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Official Symbol & Sweep</div>
+        </div>
+        <div onclick="seekTime(8.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 03 • 00:08.2s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">BRAND PROMISE</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Masa Depan & Peluang Dunia</div>
+        </div>
+        <div onclick="seekTime(11.2)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #38BDF8;">SCENE 04 • 00:11.2s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">01. JEPANG & KOREA</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Sequential Active Nodes</div>
+        </div>
+        <div onclick="seekTime(15.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #FBBF24;">SCENE 04 • 00:15.5s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">02. WELDING & KAIGO</div>
+          <div style="font-size: 11px; color: #8FA8BF;">SMAW/GMAW & Caregiver</div>
+        </div>
+        <div onclick="seekTime(20.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #22D3EE;">SCENE 05 • 00:20.5s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">JOURNEY DIAGRAM</div>
+          <div style="font-size: 11px; color: #8FA8BF;">Belajar → Berlatih → Siap</div>
+        </div>
+        <div onclick="seekTime(25.5)" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(34,211,238,0.2); border-radius: 12px; padding: 12px; cursor: pointer;">
+          <div style="font-size: 10px; font-weight: 800; color: #D5B779;">SCENE 06 • 00:25.5s</div>
+          <div style="font-size: 12px; font-weight: 800; color: #F8FAFC; margin: 4px 0;">BRAND FINALE</div>
+          <div style="font-size: 11px; color: #8FA8BF;">CTA ratechs.id</div>
         </div>
       </div>
     </div>
@@ -363,27 +419,34 @@
     const ctx = canvas.getContext('2d');
     const viewport = document.getElementById('viewport');
     const heroPoster = document.getElementById('heroPoster');
-    const playToggleBtn = document.getElementById('playToggleBtn');
-    const restartBtn = document.getElementById('restartBtn');
+    const playBtn = document.getElementById('playBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const stepBackBtn = document.getElementById('stepBackBtn');
+    const stepFwdBtn = document.getElementById('stepFwdBtn');
+    const capturePngBtn = document.getElementById('capturePngBtn');
     const timelineTrack = document.getElementById('timelineTrack');
     const timelineFill = document.getElementById('timelineFill');
-    const timeDisplay = document.getElementById('timeDisplay');
-    const audioToggleBtn = document.getElementById('audioToggleBtn');
-    const fullscreenBtn = document.getElementById('fullscreenBtn');
-    const exportVideoBtn = document.getElementById('exportVideoBtn');
-    const exportStatus = document.getElementById('exportStatus');
+    const timeCounter = document.getElementById('timeCounter');
+    const audioToggle = document.getElementById('audioToggle');
+    const fsBtn = document.getElementById('fsBtn');
+    const exportBtn = document.getElementById('exportBtn');
+    const exportLabel = document.getElementById('exportLabel');
     const exportProgress = document.getElementById('exportProgress');
 
-    const TOTAL_DURATION = 28.0; // Tepat 28 detik (1680 frame @ 60fps)
+    const TOTAL_DURATION = 28.0; // Tepat 28 detik (1.680 frame @ 60 FPS)
     let currentTime = 0;
     let isPlaying = false;
-    let isAudioActive = true;
-    let lastTimestamp = 0;
+    let isAudioOn = true;
+    let lastStamp = 0;
+
+    // Web Audio Synthesizer Nodes
     let audioCtx = null;
+    let masterCompressor = null;
+    let masterGain = null;
     let mediaDestNode = null;
-    let isRecordingExport = false;
+    let isExporting = false;
     let mediaRecorder = null;
-    let recordedChunks = [];
+    let recordedBlobs = [];
 
     // Preload Logo Resmi
     const logoImg = new Image();
@@ -392,12 +455,9 @@
     logoImg.onload = () => { logoLoaded = true; };
 
     // ==========================================
-    // PROCEDURAL WEB AUDIO SYNTHESIZER
+    // RESTRAINED TECH COMMERCIAL SOUND DESIGN
     // ==========================================
-    let masterCompressor = null;
-    let masterGain = null;
-
-    function setupAudioContext() {
+    function setupAudio() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         mediaDestNode = audioCtx.createMediaStreamDestination();
@@ -423,671 +483,557 @@
       }
     }
 
-    function routeAudio(node) {
+    function routeSound(node) {
       if (!masterCompressor) return;
       node.connect(masterCompressor);
     }
 
-    // Rhodes FM Electric Piano Note
-    function playRhodesTone(freq, gainLevel = 0.09) {
-      if (!isAudioActive || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      try {
-        const carrier = audioCtx.createOscillator();
-        const mod = audioCtx.createOscillator();
-        const modGain = audioCtx.createGain();
-        const carrierGain = audioCtx.createGain();
-
-        carrier.type = 'sine';
-        carrier.frequency.setValueAtTime(freq, now);
-
-        mod.type = 'triangle';
-        mod.frequency.setValueAtTime(freq * 2.0, now); // Harmonic ratio 2:1
-
-        modGain.gain.setValueAtTime(freq * 0.75, now);
-        modGain.gain.exponentialRampToValueAtTime(1.0, now + 1.1);
-
-        mod.connect(modGain);
-        modGain.connect(carrier.frequency);
-
-        carrierGain.gain.setValueAtTime(0.001, now);
-        carrierGain.gain.linearRampToValueAtTime(gainLevel, now + 0.03);
-        carrierGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.6);
-
-        carrier.connect(carrierGain);
-        routeAudio(carrierGain);
-
-        carrier.start(now);
-        mod.start(now);
-        carrier.stop(now + 1.8);
-        mod.stop(now + 1.8);
-      } catch (e) {}
-    }
-
-    // Warm Analog Low-pass Pad Chord
-    function playWarmPadChord(baseFreq, duration = 2.2, gainLevel = 0.04) {
-      if (!isAudioActive || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      [-3.5, 0, 3.5].forEach(detune => {
-        try {
-          const osc = audioCtx.createOscillator();
-          const filter = audioCtx.createBiquadFilter();
-          const gain = audioCtx.createGain();
-
-          osc.type = 'sawtooth';
-          osc.frequency.setValueAtTime(baseFreq, now);
-          osc.detune.setValueAtTime(detune, now);
-
-          filter.type = 'lowpass';
-          filter.frequency.setValueAtTime(750, now);
-          filter.frequency.linearRampToValueAtTime(1400, now + duration * 0.5);
-          filter.frequency.linearRampToValueAtTime(650, now + duration);
-
-          gain.gain.setValueAtTime(0.001, now);
-          gain.gain.linearRampToValueAtTime(gainLevel, now + 0.45);
-          gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
-
-          osc.connect(filter);
-          filter.connect(gain);
-          routeAudio(gain);
-
-          osc.start(now);
-          osc.stop(now + duration);
-        } catch (e) {}
-      });
-    }
-
-    // Punchy Acoustic Kick
-    function triggerPunchyKick() {
-      if (!isAudioActive || !audioCtx) return;
+    // Soft Tonal Brand Note
+    function playTonalChime(freq, gainLevel = 0.08) {
+      if (!isAudioOn || !audioCtx) return;
       const now = audioCtx.currentTime;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
-        osc.frequency.setValueAtTime(155, now);
-        osc.frequency.exponentialRampToValueAtTime(42, now + 0.11);
-        gain.gain.setValueAtTime(0.32, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
-        osc.connect(gain);
-        routeAudio(gain);
-        osc.start(now);
-        osc.stop(now + 0.33);
-      } catch (e) {}
-    }
-
-    // Studio Snare & Clap
-    function triggerStudioSnare() {
-      if (!isAudioActive || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      try {
-        const bufferSize = audioCtx.sampleRate * 0.16;
-        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-        const data = buffer.getChannelData(0);
-        for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
-
-        const noise = audioCtx.createBufferSource();
-        noise.buffer = buffer;
-
-        const filter = audioCtx.createBiquadFilter();
-        filter.type = 'highpass';
-        filter.frequency.setValueAtTime(1400, now);
-
-        const gain = audioCtx.createGain();
-        gain.gain.setValueAtTime(0.18, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
-
-        noise.connect(filter);
-        filter.connect(gain);
-        routeAudio(gain);
-        noise.start(now);
-
-        const osc = audioCtx.createOscillator();
-        const oscGain = audioCtx.createGain();
-        osc.frequency.setValueAtTime(200, now);
-        osc.frequency.exponentialRampToValueAtTime(110, now + 0.08);
-        oscGain.gain.setValueAtTime(0.15, now);
-        oscGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
-        osc.connect(oscGain);
-        routeAudio(oscGain);
-        osc.start(now);
-        osc.stop(now + 0.1);
-      } catch (e) {}
-    }
-
-    // Hi-Hat
-    function triggerHiHat(open = false) {
-      if (!isAudioActive || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      try {
-        const size = audioCtx.sampleRate * (open ? 0.22 : 0.04);
-        const buffer = audioCtx.createBuffer(1, size, audioCtx.sampleRate);
-        const data = buffer.getChannelData(0);
-        for (let i = 0; i < size; i++) data[i] = Math.random() * 2 - 1;
-
-        const noise = audioCtx.createBufferSource();
-        noise.buffer = buffer;
-        const filter = audioCtx.createBiquadFilter();
-        filter.type = 'highpass';
-        filter.frequency.setValueAtTime(7800, now);
-
-        const gain = audioCtx.createGain();
-        gain.gain.setValueAtTime(open ? 0.08 : 0.05, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + (open ? 0.2 : 0.035));
-
-        noise.connect(filter);
-        filter.connect(gain);
-        routeAudio(gain);
-        noise.start(now);
-      } catch (e) {}
-    }
-
-    // Whoosh / Swell Transition SFX
-    function triggerWhooshTransition() {
-      if (!isAudioActive || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      try {
-        const osc = audioCtx.createOscillator();
-        const filter = audioCtx.createBiquadFilter();
-        const gain = audioCtx.createGain();
-
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(110, now);
-        osc.frequency.exponentialRampToValueAtTime(750, now + 0.55);
-
-        filter.type = 'bandpass';
-        filter.frequency.setValueAtTime(320, now);
-        filter.frequency.exponentialRampToValueAtTime(2900, now + 0.55);
-
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
         gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.07, now + 0.35);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.65);
+        gain.gain.linearRampToValueAtTime(gainLevel, now + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.6);
+        osc.connect(gain);
+        routeSound(gain);
+        osc.start(now);
+        osc.stop(now + 1.7);
+      } catch (e) {}
+    }
 
+    // Node Activation Pulse
+    function playNodePulse(freq = 520) {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.06, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+        osc.connect(gain);
+        routeSound(gain);
+        osc.start(now);
+        osc.stop(now + 0.2);
+      } catch (e) {}
+    }
+
+    // Dark Ambient Drone
+    function playAmbientBed(freq = 110, duration = 3.0) {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      try {
+        const osc = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now);
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(450, now);
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.linearRampToValueAtTime(0.04, now + 0.5);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
         osc.connect(filter);
         filter.connect(gain);
-        routeAudio(gain);
+        routeSound(gain);
         osc.start(now);
-        osc.stop(now + 0.65);
+        osc.stop(now + duration);
       } catch (e) {}
     }
 
-    // Audio Timeline Synchronizer @ 106 BPM (Chords: Cmaj7 -> Am7 -> Fmaj7 -> G7)
+    // Subtle Percussive Click / Pulse
+    function playSubtleClick() {
+      if (!isAudioOn || !audioCtx) return;
+      const now = audioCtx.currentTime;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.setValueAtTime(140, now);
+        osc.frequency.exponentialRampToValueAtTime(48, now + 0.08);
+        gain.gain.setValueAtTime(0.18, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+        osc.connect(gain);
+        routeSound(gain);
+        osc.start(now);
+        osc.stop(now + 0.16);
+      } catch (e) {}
+    }
+
+    // Audio Sync Master
     let lastAudioStep = -1;
-    function syncAudioAt(t) {
+    function syncSoundtrack(t) {
       if (!isPlaying) return;
-      const bpm = 106;
-      const step = Math.floor(t * (bpm / 60) * 2); // 8th note subdivisions
+      const bpm = 100;
+      const step = Math.floor(t * (bpm / 60) * 2);
       if (step !== lastAudioStep) {
         lastAudioStep = step;
-        const measure = Math.floor(step / 8);
 
-        const chords = [
-          [261.63, 329.63, 392.00, 493.88], // Cmaj7
-          [220.00, 261.63, 329.63, 392.00], // Am7
-          [174.61, 220.00, 261.63, 329.63], // Fmaj7
-          [196.00, 246.94, 293.66, 349.23]  // G7
-        ];
-        const chord = chords[measure % 4];
-
-        // Downbeat chord strike
+        // Ambient chords
         if (step % 8 === 0) {
-          chord.forEach((freq, i) => {
-            setTimeout(() => playRhodesTone(freq, 0.08), i * 30);
-          });
-          playWarmPadChord(chord[0], 2.2, 0.04);
+          const chords = [261.63, 220.00, 174.61, 196.00];
+          const c = chords[Math.floor(step / 8) % 4];
+          playTonalChime(c, 0.07);
+          playAmbientBed(c * 0.5, 2.5);
         }
 
-        // Drum groove starts at Scene 2 (t >= 5s)
-        if (t >= 5.0) {
-          // Kick on 1 and 3
-          if (step % 8 === 0 || step % 8 === 4) {
-            triggerPunchyKick();
-          }
-          // Snare on 2 and 4
-          if (step % 8 === 2 || step % 8 === 6) {
-            triggerStudioSnare();
-          }
-          // Hi-hat on 8th notes
-          if (step % 2 === 0) {
-            triggerHiHat(step % 8 === 7);
-          }
+        // Node activation pulses in Scene 4 & 5
+        if ((t >= 10 && t < 19 && step % 4 === 0) || (t >= 19 && t < 23 && step % 4 === 0)) {
+          playNodePulse(440 + (step % 4) * 80);
+          playSubtleClick();
         }
 
-        // Scene transition whoosh
-        if (Math.abs(t - 4.9) < 0.06 || Math.abs(t - 8.9) < 0.06 || Math.abs(t - 16.9) < 0.06 || Math.abs(t - 21.9) < 0.06) {
-          triggerWhooshTransition();
+        // Final resolution chime
+        if (Math.abs(t - 23.5) < 0.05) {
+          playTonalChime(523.25, 0.12);
         }
       }
     }
 
     // ==========================================
-    // DETERMINISTIC CANVAS MOTION GRAPHICS
+    // DETERMINISTIC 60 FPS TECH MOTION GRAPHICS
     // ==========================================
     function easeOutCubic(x) { return 1 - Math.pow(1 - x, 3); }
-    function easeInOutCubic(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
     function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
 
-    // Background Canvas: Soft Volumetric Atmosphere + Controlled Perspective Grid
+    // Canvas Background: Near-Black Navy with Subtle Technical Grid
     function drawBackground(t) {
       const grad = ctx.createRadialGradient(960, 540, 80, 960, 540, 1150);
-      grad.addColorStop(0, '#163A5F');
-      grad.addColorStop(0.55, '#0E2640');
-      grad.addColorStop(1, '#06111E');
+      grad.addColorStop(0, '#0B1B2F');
+      grad.addColorStop(0.6, '#060F1A');
+      grad.addColorStop(1, '#03070E');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 1920, 1080);
 
-      // Subtle Perspective Moving Grid
-      ctx.strokeStyle = 'rgba(22, 166, 161, 0.06)';
-      ctx.lineWidth = 1.2;
-      const offset = (t * 22) % 60;
-      for (let x = offset; x < 1920; x += 60) {
+      // Fine Subtle Blueprint Grid Lines
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.035)';
+      ctx.lineWidth = 1;
+      const move = (t * 15) % 80;
+      for (let x = move; x < 1920; x += 80) {
         ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 1080); ctx.stroke();
       }
-      for (let y = offset; y < 1080; y += 60) {
+      for (let y = move; y < 1080; y += 80) {
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1920, y); ctx.stroke();
-      }
-
-      // Soft Floating Bokeh Particles
-      for (let i = 0; i < 26; i++) {
-        const bx = (i * 179 + t * 30) % 1920;
-        const by = (i * 261 + Math.sin(t * 0.7 + i) * 70) % 1080;
-        const r = 20 + (i % 5) * 14;
-        const g = ctx.createRadialGradient(bx, by, 0, bx, by, r);
-        g.addColorStop(0, 'rgba(32, 197, 191, 0.1)');
-        g.addColorStop(1, 'rgba(32, 197, 191, 0)');
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(bx, by, r, 0, Math.PI * 2);
-        ctx.fill();
       }
     }
 
-    // SCENE 1 — GRAND REVEAL (00:00 – 00:05)
+    // SCENE 01 — OPENING STATEMENT (00:00–00:04 | Frames 0–240)
     function renderScene1(t) {
-      const p = clamp(t / 1.8, 0, 1);
-      const scale = easeOutCubic(p);
+      const p1 = clamp(t / 1.5, 0, 1);
+      const p2 = clamp((t - 1.4) / 1.2, 0, 1);
 
       ctx.save();
-      ctx.translate(960, 420);
-      ctx.scale(scale, scale);
+      ctx.textAlign = 'center';
 
-      // Radial Aura Behind Logo
-      const aura = ctx.createRadialGradient(0, 0, 60, 0, 0, 300);
-      aura.addColorStop(0, 'rgba(22, 166, 161, 0.42)');
-      aura.addColorStop(0.65, 'rgba(212, 175, 55, 0.15)'); // Champagne gold hint
-      aura.addColorStop(1, 'rgba(22, 166, 161, 0)');
+      // Category Pill
+      ctx.fillStyle = 'rgba(34, 211, 238, 0.15)';
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.4)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(960 - 150, 320, 300, 34, 17);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 13px "Plus Jakarta Sans"';
+      ctx.fillText('FOUNDATIONAL CAPABILITY', 960, 342);
+
+      // Headline 1: KETERAMPILAN
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 94px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.globalAlpha = easeOutCubic(p1);
+      ctx.fillText('KETERAMPILAN', 960, 460);
+
+      // Guided Fine Light Path Drawing
+      const lineLen = clamp((t - 0.7) / 1.2, 0, 1) * 540;
+      ctx.strokeStyle = '#22D3EE';
+      ctx.lineWidth = 2;
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.8)';
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      ctx.moveTo(960 - lineLen / 2, 505);
+      ctx.lineTo(960 + lineLen / 2, 505);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+
+      // Headline 2: UNTUK MASA DEPAN
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '900 84px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.globalAlpha = easeOutCubic(p2);
+      ctx.fillText('UNTUK MASA DEPAN', 960, 615);
+
+      ctx.restore();
+    }
+
+    // SCENE 02 — LOGO AND BRAND IDENTITY (00:04–00:07 | Frames 240–420)
+    function renderScene2(t) {
+      const st = t - 4.0;
+      const p = clamp(st / 1.2, 0, 1);
+      const sc = 0.88 + 0.12 * easeOutCubic(p);
+
+      ctx.save();
+      ctx.translate(960, 430);
+      ctx.scale(sc, sc);
+
+      // Cyan Aura
+      const aura = ctx.createRadialGradient(0, 0, 40, 0, 0, 260);
+      aura.addColorStop(0, 'rgba(34, 211, 238, 0.35)');
+      aura.addColorStop(1, 'rgba(34, 211, 238, 0)');
       ctx.fillStyle = aura;
       ctx.beginPath();
-      ctx.arc(0, 0, 300, 0, Math.PI * 2);
+      ctx.arc(0, 0, 260, 0, Math.PI * 2);
       ctx.fill();
 
-      // Premium Card Base for Logo
+      // Logo Substrate
       ctx.fillStyle = '#FFFFFF';
-      ctx.shadowColor = 'rgba(0, 0, 0, 0.55)';
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
       ctx.shadowBlur = 40;
       ctx.beginPath();
-      ctx.roundRect(-125, -125, 250, 250, 38);
+      ctx.roundRect(-100, -100, 200, 200, 32);
       ctx.fill();
       ctx.shadowBlur = 0;
 
-      // Draw Logo (Strictly Unaltered Proportion & Original Colors)
       if (logoLoaded) {
-        ctx.drawImage(logoImg, -105, -105, 210, 210);
-      } else {
-        ctx.fillStyle = '#163A5F';
-        ctx.font = '900 42px "Plus Jakarta Sans"';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText('LPK', 0, 0);
+        ctx.drawImage(logoImg, -82, -82, 164, 164);
       }
 
-      // Light Sweep Across Logo
-      if (t >= 1.0 && t <= 2.4) {
-        const sweepP = (t - 1.0) / 1.4;
-        const sweepX = -200 + sweepP * 400;
-        const sweepGrad = ctx.createLinearGradient(sweepX - 50, -125, sweepX + 50, 125);
-        sweepGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
-        sweepGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.45)');
-        sweepGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-        ctx.fillStyle = sweepGrad;
+      // Directional Light Sweep
+      if (st >= 0.5 && st <= 1.8) {
+        const sw = (st - 0.5) / 1.3;
+        const swX = -180 + sw * 360;
+        const swGrad = ctx.createLinearGradient(swX - 40, -100, swX + 40, 100);
+        swGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+        swGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.5)');
+        swGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        ctx.fillStyle = swGrad;
         ctx.beginPath();
-        ctx.roundRect(-125, -125, 250, 250, 38);
+        ctx.roundRect(-100, -100, 200, 200, 32);
         ctx.fill();
       }
 
       ctx.restore();
 
-      // Company Name & Official Tagline
-      const textP = clamp((t - 1.4) / 1.0, 0, 1);
+      // Brand Name
+      const textP = clamp((st - 0.7) / 1.0, 0, 1);
       ctx.save();
       ctx.globalAlpha = easeOutCubic(textP);
       ctx.textAlign = 'center';
 
-      ctx.fillStyle = '#20C5BF';
-      ctx.font = '800 24px "Plus Jakarta Sans"';
-      ctx.fillText('LEMBAGA PELATIHAN KERJA TERPERCAYA', 960, 650);
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 16px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.15em';
+      ctx.fillText('LEMBAGA PELATIHAN KERJA RESMI', 960, 640);
 
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 60px "Plus Jakarta Sans"';
-      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 725);
-
-      ctx.fillStyle = '#E5C158'; // Champagne gold accent
-      ctx.font = '600 28px "Plus Jakarta Sans"';
-      ctx.fillText('“Mempersiapkan Masa Depan, Membuka Peluang Dunia.”', 960, 785);
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 56px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '-0.02em';
+      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 715);
       ctx.restore();
     }
 
-    // SCENE 2 — OPPORTUNITY AND VISION (00:05 – 00:09)
-    function renderScene2(t) {
-      const st = t - 5.0;
-      const alpha = clamp(st / 0.55, 0, 1);
+    // SCENE 03 — BRAND PROMISE (00:07–00:10 | Frames 420–600)
+    function renderScene3(t) {
+      const st = t - 7.0;
+      const p1 = clamp(st / 1.0, 0, 1);
+      const p2 = clamp((st - 0.8) / 1.0, 0, 1);
 
       ctx.save();
-      ctx.globalAlpha = alpha;
       ctx.textAlign = 'center';
 
-      // Staggered Headline (From Master Prompt)
-      const h1P = clamp(st / 0.6, 0, 1);
-      const h2P = clamp((st - 0.4) / 0.6, 0, 1);
+      // Line 1
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '800 58px "Plus Jakarta Sans"';
+      ctx.globalAlpha = easeOutCubic(p1);
+      ctx.fillText('Mempersiapkan Masa Depan,', 960, 420);
+
+      // Guided Vector Line
+      const lineLen = clamp((st - 0.5) / 1.2, 0, 1) * 780;
+      ctx.strokeStyle = '#22D3EE';
+      ctx.lineWidth = 2;
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.8)';
+      ctx.shadowBlur = 14;
+      ctx.beginPath();
+      ctx.moveTo(960 - lineLen / 2, 470);
+      ctx.lineTo(960 + lineLen / 2, 470);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+
+      // Line 2 (Cyan Highlight)
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '900 66px "Plus Jakarta Sans"';
+      ctx.globalAlpha = easeOutCubic(p2);
+      ctx.fillText('Membuka Peluang Dunia.', 960, 560);
+
+      ctx.fillStyle = '#8FA8BF';
+      ctx.font = '600 22px "Plus Jakarta Sans"';
+      ctx.fillText('Standar Kompetensi Kerja Terarah • Kurikulum Bahasa Asing & Kejuruan Vokasi', 960, 640);
+      ctx.restore();
+    }
+
+    // SCENE 04 — FOUR CAREER PATHWAYS SYSTEM (00:10–00:19 | Frames 600–1140)
+    function renderScene4(t) {
+      const st = t - 10.0;
+      const activeIdx = Math.min(3, Math.floor(st / 2.25));
 
       ctx.save();
-      ctx.globalAlpha = easeOutCubic(h1P);
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 56px "Plus Jakarta Sans"';
-      ctx.fillText('Keterampilan Hari Ini,', 960, 240);
-      ctx.restore();
+      ctx.textAlign = 'center';
 
-      ctx.save();
-      ctx.globalAlpha = easeOutCubic(h2P);
-      ctx.fillStyle = '#20C5BF';
-      ctx.font = '900 56px "Plus Jakarta Sans"';
-      ctx.fillText('Peluang Esok Hari.', 960, 310);
-      ctx.restore();
+      // Header
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 14px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.2em';
+      ctx.fillText('CONNECTED CAREER SYSTEM', 960, 190);
 
-      // 3 Highlight Pillars
-      const highlights = [
-        { title: 'Pelatihan Vokasi', desc: 'Kurikulum aplikatif & pembinaan keterampilan kerja standar industri', icon: '⚙️' },
-        { title: 'Pembelajaran Bahasa Asing', desc: 'Penguasaan percakapan praktis, etika kerja & budaya profesional', icon: '🌐' },
-        { title: 'Persiapan Karier Profesional', desc: 'Pembinaan disiplin, etos kerja tinggi & kesiapan mental bersaing', icon: '🎓' }
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 48px "Plus Jakarta Sans"';
+      ctx.fillText('EMPAT JALUR PELATIHAN PROFESIONAL', 960, 245);
+
+      const nodes = [
+        { step: '01', country: 'JEPANG', prog: 'TOKUTEI GINOU', det: 'JFT A2 / N4 • Budaya Hourensou', icon: '🇯🇵', color: '#22D3EE' },
+        { step: '02', country: 'KOREA', prog: 'EPS-TOPIK', det: 'PROGRAM G-TO-G • UBT Komputer', icon: '🇰🇷', color: '#38BDF8' },
+        { step: '03', country: 'WELDING', prog: 'SMAW / GMAW', det: '3G / 4G • Standar K3 Bengkel', icon: '⚡', color: '#FBBF24' },
+        { step: '04', country: 'CAREGIVER', prog: 'KAIGO', det: 'Pendampingan Lansia Profesional', icon: '🩺', color: '#34D399' }
       ];
 
-      highlights.forEach((h, idx) => {
-        const itemP = clamp((st - 0.7 - idx * 0.22) / 0.55, 0, 1);
-        const yOffset = (1 - easeOutCubic(itemP)) * 60;
-        const cx = 360 + idx * 400;
-        const cy = 450 + yOffset;
+      // Sequential Connecting Line
+      const linePct = clamp(st / 8.0, 0, 1);
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.2)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(380, 480);
+      ctx.lineTo(1540, 480);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#22D3EE';
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
+      ctx.shadowBlur = 10;
+      ctx.beginPath();
+      ctx.moveTo(380, 480);
+      ctx.lineTo(380 + linePct * (1540 - 380), 480);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+
+      // 4 Node Panels
+      nodes.forEach((n, i) => {
+        const isCurrent = (i === activeIdx);
+        const isPassed = (i <= activeIdx);
+        const cx = 380 + i * (1160 / 3);
+        const cy = 560;
 
         ctx.save();
-        ctx.globalAlpha = itemP;
         ctx.translate(cx, cy);
 
-        // Glassmorphism Card
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
-        ctx.strokeStyle = 'rgba(32, 197, 191, 0.4)';
-        ctx.lineWidth = 1.8;
+        // Panel Box
+        ctx.fillStyle = isCurrent ? 'rgba(16, 43, 73, 0.85)' : isPassed ? 'rgba(11, 27, 47, 0.6)' : 'rgba(5, 15, 26, 0.4)';
+        ctx.strokeStyle = isCurrent ? n.color : isPassed ? 'rgba(34, 211, 238, 0.4)' : 'rgba(255, 255, 255, 0.08)';
+        ctx.lineWidth = isCurrent ? 2 : 1;
+        ctx.shadowColor = isCurrent ? 'rgba(34, 211, 238, 0.4)' : 'transparent';
+        ctx.shadowBlur = isCurrent ? 25 : 0;
         ctx.beginPath();
-        ctx.roundRect(-165, 0, 330, 350, 26);
+        ctx.roundRect(-165, -160, 330, 320, 20);
         ctx.fill();
         ctx.stroke();
-
-        ctx.font = '52px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText(h.icon, 0, 100);
-
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = '800 24px "Plus Jakarta Sans"';
-        ctx.fillText(h.title, 0, 185);
-
-        ctx.fillStyle = '#94A3B8';
-        ctx.font = '500 16px "Plus Jakarta Sans"';
-        ctx.fillText(h.desc, 0, 230, 280);
-
-        ctx.restore();
-      });
-
-      ctx.restore();
-    }
-
-    // SCENE 3 — CAREER PATHS (00:09 – 00:17)
-    // 4 Kategori Program Sesuai Prompt: Perhotelan, Housekeeping / Maid, Pengasuh Lansia / Caregiver, Domestic Worker
-    function renderScene3(t) {
-      const st = t - 9.0;
-      const alpha = clamp(st / 0.55, 0, 1);
-
-      ctx.save();
-      ctx.globalAlpha = alpha;
-      ctx.textAlign = 'center';
-
-      ctx.fillStyle = '#20C5BF';
-      ctx.font = '800 22px "Plus Jakarta Sans"';
-      ctx.fillText('PROGRAM PELATIHAN TERPADU', 960, 175);
-
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 48px "Plus Jakarta Sans"';
-      ctx.fillText('Pilihan Jalur Keterampilan Profesional', 960, 235);
-
-      // Supporting Languages Banner (Sesuai Prompt: Jepang • Korea • Arab • Inggris)
-      ctx.fillStyle = '#E5C158';
-      ctx.font = '700 16px "Plus Jakarta Sans"';
-      ctx.fillText('DUKUNGAN BAHASA: JEPANG  •  KOREA  •  ARAB  •  INGGRIS', 960, 280);
-
-      const careerPaths = [
-        {
-          num: '01',
-          title: 'Perhotelan',
-          sub: 'Pelayanan hotel & front desk standar ramah tamah global',
-          icon: '🏨',
-          color: '#16A6A1'
-        },
-        {
-          num: '02',
-          title: 'Housekeeping / Maid',
-          sub: 'Teknik kebersihan, tata graha & pengelolaan residensial',
-          icon: '🧹',
-          color: '#2563EB'
-        },
-        {
-          num: '03',
-          title: 'Pengasuh Lansia / Caregiver',
-          sub: 'Pendampingan lansia penuh empati & etika perawatan harian',
-          icon: '🩺',
-          color: '#059669'
-        },
-        {
-          num: '04',
-          title: 'Domestic Worker',
-          sub: 'Keterampilan kerja rumah tangga profesional & manajemen waktu',
-          icon: '🏠',
-          color: '#D97706'
-        }
-      ];
-
-      // Balanced 2 x 2 Layout on 16:9 Screen
-      careerPaths.forEach((cp, idx) => {
-        const itemP = clamp((st - 0.4 - idx * 0.22) / 0.55, 0, 1);
-        const cardX = (idx % 2 === 0) ? 590 : 1330;
-        const cardY = (idx < 2) ? 440 : 660;
-
-        ctx.save();
-        ctx.globalAlpha = itemP;
-        ctx.translate(cardX, cardY);
-        const sc = 0.93 + 0.07 * easeOutCubic(itemP);
-        ctx.scale(sc, sc);
-
-        // Card Base
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
-        ctx.lineWidth = 1.8;
-        ctx.beginPath();
-        ctx.roundRect(-330, -90, 660, 180, 22);
-        ctx.fill();
-        ctx.stroke();
-
-        // Left Colored Accent Strip
-        ctx.fillStyle = cp.color;
-        ctx.beginPath();
-        ctx.roundRect(-330, -90, 10, 180, [22, 0, 0, 22]);
-        ctx.fill();
-
-        // Icon
-        ctx.font = '50px sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(cp.icon, -295, 12);
-
-        // Number Badge
-        ctx.fillStyle = '#20C5BF';
-        ctx.font = '800 13px "Plus Jakarta Sans"';
-        ctx.fillText(`JALUR ${cp.num}`, -220, -40);
-
-        // Title
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = '800 25px "Plus Jakarta Sans"';
-        ctx.fillText(cp.title, -220, -8);
-
-        // Subtext Description
-        ctx.fillStyle = '#CBD5E1';
-        ctx.font = '500 16px "Plus Jakarta Sans"';
-        ctx.fillText(cp.sub, -220, 26);
-
-        ctx.restore();
-      });
-
-      ctx.restore();
-    }
-
-    // SCENE 4 — SIMPLE, CLEAR, SECURE (00:17 – 00:22)
-    // 5 Node Alur: Kunjungi Website -> Pilih Program -> Isi Formulir -> Verifikasi -> Mulai Pelatihan
-    function renderScene4(t) {
-      const st = t - 17.0;
-      const alpha = clamp(st / 0.55, 0, 1);
-
-      ctx.save();
-      ctx.globalAlpha = alpha;
-      ctx.textAlign = 'center';
-
-      ctx.fillStyle = '#20C5BF';
-      ctx.font = '800 22px "Plus Jakarta Sans"';
-      ctx.fillText('ALUR PENDAFTARAN JELAS & TRANSPARAN', 960, 225);
-
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 50px "Plus Jakarta Sans"';
-      ctx.fillText('Lima Tahap Menuju Kelas Pelatihan', 960, 290);
-
-      const workflow = [
-        { step: '1', title: 'Kunjungi Website', sub: 'Pahami profil & info' },
-        { step: '2', title: 'Pilih Program', sub: 'Tentukan kejuruan' },
-        { step: '3', title: 'Isi Formulir', sub: 'Lengkapi identitas' },
-        { step: '4', title: 'Verifikasi', sub: 'Validasi dokumen resmi' },
-        { step: '5', title: 'Mulai Pelatihan', sub: 'Teori & bengkel kerja' }
-      ];
-
-      const activeIdx = Math.min(4, Math.floor(st * 1.5));
-
-      workflow.forEach((wf, idx) => {
-        const x = 320 + idx * 320;
-        const y = 490;
-        const isPastOrCurrent = idx <= activeIdx;
-
-        // Connecting Line
-        if (idx < 4) {
-          ctx.strokeStyle = (idx < activeIdx) ? '#16A6A1' : 'rgba(255, 255, 255, 0.15)';
-          ctx.lineWidth = 5;
-          ctx.beginPath();
-          ctx.moveTo(x + 55, y);
-          ctx.lineTo(x + 265, y);
-          ctx.stroke();
-        }
-
-        // Node Circle
-        ctx.fillStyle = isPastOrCurrent ? '#16A6A1' : 'rgba(255, 255, 255, 0.12)';
-        ctx.shadowColor = isPastOrCurrent ? 'rgba(22, 166, 161, 0.75)' : 'transparent';
-        ctx.shadowBlur = isPastOrCurrent ? 24 : 0;
-        ctx.beginPath();
-        ctx.arc(x, y, 46, 0, Math.PI * 2);
-        ctx.fill();
         ctx.shadowBlur = 0;
 
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = '900 28px "Plus Jakarta Sans"';
-        ctx.fillText(wf.step, x, y + 10);
+        // Step Circle
+        ctx.fillStyle = isCurrent ? n.color : isPassed ? 'rgba(34, 211, 238, 0.2)' : 'rgba(255, 255, 255, 0.08)';
+        ctx.beginPath();
+        ctx.arc(0, -95, 22, 0, Math.PI * 2);
+        ctx.fill();
 
-        ctx.fillStyle = isPastOrCurrent ? '#FFFFFF' : '#64748B';
-        ctx.font = '800 22px "Plus Jakarta Sans"';
-        ctx.fillText(wf.title, x, y + 88);
+        ctx.fillStyle = isCurrent ? '#03070E' : '#F8FAFC';
+        ctx.font = '900 15px "Plus Jakarta Sans"';
+        ctx.fillText(n.step, 0, -89);
 
-        ctx.fillStyle = '#94A3B8';
-        ctx.font = '500 15px "Plus Jakarta Sans"';
-        ctx.fillText(wf.sub, x, y + 116);
+        // Icon
+        ctx.font = '40px sans-serif';
+        ctx.fillText(n.icon, 0, -25);
+
+        // Country
+        ctx.fillStyle = isCurrent ? n.color : isPassed ? '#22D3EE' : '#64748B';
+        ctx.font = '800 13px "Plus Jakarta Sans"';
+        ctx.letterSpacing = '0.1em';
+        ctx.fillText(n.country, 0, 30);
+
+        // Program
+        ctx.fillStyle = isCurrent ? '#F8FAFC' : isPassed ? '#E2E8F0' : '#64748B';
+        ctx.font = '900 22px "Plus Jakarta Sans"';
+        ctx.fillText(n.prog, 0, 62);
+
+        // Detail
+        ctx.fillStyle = isCurrent ? '#CBD5E1' : '#64748B';
+        ctx.font = '500 13px "Plus Jakarta Sans"';
+        ctx.fillText(n.det, 0, 95);
+
+        ctx.restore();
       });
-
-      // Shield Element for Data Privacy (Sesuai Master Prompt)
-      ctx.fillStyle = '#CBD5E1';
-      ctx.font = '600 20px "Plus Jakarta Sans"';
-      ctx.fillText('🛡️ Dokumen pendaftaran diproses aman dengan otorisasi berbasis hak akses terstandarisasi', 960, 745);
 
       ctx.restore();
     }
 
-    // SCENE 5 — CLIMAX AND CTA (00:22 – 00:28)
-    // Teks & CTA Tampil Jelas Setidaknya 2 Detik Sebelum Selesai. Kontak: ratechs.id (TANPA NOMOR TELEPON).
+    // SCENE 05 — THE PREPARATION JOURNEY (00:19–00:23 | Frames 1140–1380)
     function renderScene5(t) {
-      const st = t - 22.0;
-      const alpha = clamp(st / 0.5, 0, 1);
+      const st = t - 19.0;
+      const currentStep = Math.min(2, Math.floor(st / 1.33));
 
       ctx.save();
-      ctx.globalAlpha = alpha;
       ctx.textAlign = 'center';
 
-      // Logo Small Return
-      if (logoLoaded) {
-        ctx.drawImage(logoImg, 960 - 45, 175, 90, 90);
-      }
+      // Header
+      ctx.fillStyle = '#22D3EE';
+      ctx.font = '800 14px "Plus Jakarta Sans"';
+      ctx.letterSpacing = '0.2em';
+      ctx.fillText('PROGRESSION FRAMEWORK', 960, 240);
 
-      ctx.fillStyle = '#20C5BF';
-      ctx.font = '800 22px "Plus Jakarta Sans"';
-      ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 295);
+      ctx.fillStyle = '#F8FAFC';
+      ctx.font = '900 50px "Plus Jakarta Sans"';
+      ctx.fillText('ALUR PERSIAPAN KETERAMPILAN', 960, 305);
 
-      // Headline (From Master Prompt)
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 64px "Plus Jakarta Sans"';
-      ctx.fillText('MASA DEPANMU DIMULAI DI SINI.', 960, 375);
+      const steps = [
+        { num: '01', title: 'BELAJAR', sub: 'Teori & Penguasaan Bahasa Asing', icon: '📖', color: '#22D3EE' },
+        { num: '02', title: 'BERLATIH', sub: '70% Praktik Bengkel & Simulasi UBT', icon: '⚙️', color: '#38BDF8' },
+        { num: '03', title: 'MEMPERSIAPKAN DIRI', sub: 'Disiplin Mental, Etos Kerja & Sertifikasi', icon: '🛡️', color: '#D5B779' }
+      ];
 
-      ctx.fillStyle = '#CBD5E1';
-      ctx.font = '500 24px "Plus Jakarta Sans"';
-      ctx.fillText('Kunjungi Website Resmi Kami', 960, 430);
-
-      // CTA Button with Subtle Pulsing Light
-      const pulse = 1 + 0.025 * Math.sin(t * 7);
-      ctx.save();
-      ctx.translate(960, 560);
-      ctx.scale(pulse, pulse);
-
-      // Soft Light Glow Behind Button
-      const glowGrad = ctx.createRadialGradient(0, 0, 50, 0, 0, 240);
-      glowGrad.addColorStop(0, 'rgba(22, 166, 161, 0.5)');
-      glowGrad.addColorStop(1, 'rgba(22, 166, 161, 0)');
-      ctx.fillStyle = glowGrad;
+      // Connecting Line
+      const linePct = clamp(st / 3.8, 0, 1);
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.2)';
+      ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.arc(0, 0, 240, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.moveTo(480, 520);
+      ctx.lineTo(1440, 520);
+      ctx.stroke();
 
-      // Button Pill
-      ctx.fillStyle = '#16A6A1';
-      ctx.shadowColor = 'rgba(22, 166, 161, 0.8)';
-      ctx.shadowBlur = 35;
+      ctx.strokeStyle = '#22D3EE';
+      ctx.shadowColor = 'rgba(34, 211, 238, 0.9)';
+      ctx.shadowBlur = 12;
       ctx.beginPath();
-      ctx.roundRect(-240, -45, 480, 90, 45);
-      ctx.fill();
-
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '900 28px "Plus Jakarta Sans"';
+      ctx.moveTo(480, 520);
+      ctx.lineTo(480 + linePct * (1440 - 480), 520);
+      ctx.stroke();
       ctx.shadowBlur = 0;
-      ctx.fillText('DAFTAR SEKARANG →', 0, 10);
-      ctx.restore();
 
-      // Footer Resmi: Email ratechs.id (SAMA SEKALI TANPA NOMOR TELEPON)
-      ctx.fillStyle = '#94A3B8';
-      ctx.font = '600 20px "Plus Jakarta Sans"';
-      ctx.fillText('✉️ Informasi & Konsultasi Resmi: ratechs.id  (kontak@ratechs.id)', 960, 715);
+      // 3 Steps
+      steps.forEach((s, i) => {
+        const isCurrent = (i === currentStep);
+        const isPassed = (i <= currentStep);
+        const cx = 480 + i * (960 / 2);
+        const cy = 570;
+
+        ctx.save();
+        ctx.translate(cx, cy);
+
+        // Panel
+        ctx.fillStyle = isCurrent ? 'rgba(16, 43, 73, 0.85)' : isPassed ? 'rgba(11, 27, 47, 0.6)' : 'rgba(5, 15, 26, 0.4)';
+        ctx.strokeStyle = isCurrent ? s.color : isPassed ? 'rgba(34, 211, 238, 0.4)' : 'rgba(255, 255, 255, 0.08)';
+        ctx.lineWidth = isCurrent ? 2 : 1;
+        ctx.shadowColor = isCurrent ? 'rgba(34, 211, 238, 0.4)' : 'transparent';
+        ctx.shadowBlur = isCurrent ? 25 : 0;
+        ctx.beginPath();
+        ctx.roundRect(-180, -130, 360, 260, 24);
+        ctx.fill();
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+
+        // Step Orb
+        ctx.fillStyle = isCurrent ? s.color : isPassed ? 'rgba(34, 211, 238, 0.2)' : 'rgba(255, 255, 255, 0.08)';
+        ctx.beginPath();
+        ctx.arc(0, -75, 24, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = isCurrent ? '#03070E' : '#F8FAFC';
+        ctx.font = '900 16px "Plus Jakarta Sans"';
+        ctx.fillText(s.num, 0, -68);
+
+        ctx.font = '36px sans-serif';
+        ctx.fillText(s.icon, 0, -12);
+
+        ctx.fillStyle = isCurrent ? '#F8FAFC' : isPassed ? '#E2E8F0' : '#64748B';
+        ctx.font = '900 26px "Plus Jakarta Sans"';
+        ctx.fillText(s.title, 0, 40);
+
+        ctx.fillStyle = isCurrent ? '#CBD5E1' : '#64748B';
+        ctx.font = '500 15px "Plus Jakarta Sans"';
+        ctx.fillText(s.sub, 0, 75);
+
+        ctx.restore();
+      });
+
+      ctx.restore();
+    }
+
+    // SCENE 06 — BRAND FINALE (00:23–00:28 | Frames 1380–1680)
+    function renderScene6(t) {
+      const st = t - 23.0;
+      ctx.save();
+      ctx.textAlign = 'center';
+
+      // Phase 1 (23s - 25s): Headline
+      if (st < 2.0) {
+        const p = clamp(st / 0.8, 0, 1);
+        ctx.globalAlpha = easeOutCubic(p);
+
+        ctx.fillStyle = '#F8FAFC';
+        ctx.font = '900 64px "Plus Jakarta Sans"';
+        ctx.letterSpacing = '-0.02em';
+        ctx.fillText('PERSIAPKAN LANGKAHMU.', 960, 480);
+
+        ctx.fillStyle = '#22D3EE';
+        ctx.font = '900 56px "Plus Jakarta Sans"';
+        ctx.letterSpacing = '-0.02em';
+        ctx.fillText('BUKA PELUANG MASA DEPAN.', 960, 560);
+      }
+      // Phase 2 (25s - 28s): Finale Settle
+      else {
+        const p2 = clamp((st - 2.0) / 0.8, 0, 1);
+        ctx.globalAlpha = easeOutCubic(p2);
+
+        // Logo
+        if (logoLoaded) {
+          ctx.drawImage(logoImg, 960 - 55, 175, 110, 110);
+        }
+
+        ctx.fillStyle = '#F8FAFC';
+        ctx.font = '900 52px "Plus Jakarta Sans"';
+        ctx.letterSpacing = '-0.02em';
+        ctx.fillText('PT. SEJAHTERA ABADI BERSAMA', 960, 345);
+
+        ctx.fillStyle = '#D5B779';
+        ctx.font = '700 24px "Plus Jakarta Sans"';
+        ctx.fillText('“Mempersiapkan Masa Depan, Membuka Peluang Dunia.”', 960, 405);
+
+        // CTA Button
+        const pulse = 1 + 0.02 * Math.sin(t * 8);
+        ctx.save();
+        ctx.translate(960, 540);
+        ctx.scale(pulse, pulse);
+
+        ctx.fillStyle = '#22D3EE';
+        ctx.shadowColor = 'rgba(34, 211, 238, 0.7)';
+        ctx.shadowBlur = 35;
+        ctx.beginPath();
+        ctx.roundRect(-220, -42, 440, 84, 42);
+        ctx.fill();
+
+        ctx.fillStyle = '#03070E';
+        ctx.font = '900 26px "Plus Jakarta Sans"';
+        ctx.shadowBlur = 0;
+        ctx.fillText('DAFTAR SEKARANG →', 0, 10);
+        ctx.restore();
+
+        // Contact (ratechs.id - NO PHONE NUMBER)
+        ctx.fillStyle = '#8FA8BF';
+        ctx.font = '600 20px "Plus Jakarta Sans"';
+        ctx.fillText('✉️ Informasi & Pendaftaran Resmi: ratechs.id  (info@ratechs.id)', 960, 710);
+      }
 
       ctx.restore();
     }
@@ -1097,34 +1043,36 @@
       ctx.clearRect(0, 0, 1920, 1080);
       drawBackground(timeSeconds);
 
-      if (timeSeconds < 5.0) {
+      if (timeSeconds < 4.0) {
         renderScene1(timeSeconds);
-      } else if (timeSeconds < 9.0) {
+      } else if (timeSeconds < 7.0) {
         renderScene2(timeSeconds);
-      } else if (timeSeconds < 17.0) {
+      } else if (timeSeconds < 10.0) {
         renderScene3(timeSeconds);
-      } else if (timeSeconds < 22.0) {
+      } else if (timeSeconds < 19.0) {
         renderScene4(timeSeconds);
-      } else {
+      } else if (timeSeconds < 23.0) {
         renderScene5(timeSeconds);
+      } else {
+        renderScene6(timeSeconds);
       }
 
-      syncAudioAt(timeSeconds);
+      syncSoundtrack(timeSeconds);
     }
 
-    // Main 60fps Loop
+    // Main 60 FPS Loop
     function frameLoop(timestamp) {
-      if (!lastTimestamp) lastTimestamp = timestamp;
-      const dt = (timestamp - lastTimestamp) / 1000;
-      lastTimestamp = timestamp;
+      if (!lastStamp) lastStamp = timestamp;
+      const dt = (timestamp - lastStamp) / 1000;
+      lastStamp = timestamp;
 
       if (isPlaying) {
         currentTime += dt;
         if (currentTime >= TOTAL_DURATION) {
           currentTime = TOTAL_DURATION;
           isPlaying = false;
-          playToggleBtn.innerText = '↺ Putar Ulang';
-          if (isRecordingExport && mediaRecorder && mediaRecorder.state === 'recording') {
+          playBtn.innerText = '↺ Putar Ulang';
+          if (isExporting && mediaRecorder && mediaRecorder.state === 'recording') {
             mediaRecorder.stop();
           }
         }
@@ -1132,19 +1080,19 @@
 
       renderFrame(currentTime);
 
-      // Timeline UI Update
+      // Timeline Progress Sync
       const pct = (currentTime / TOTAL_DURATION) * 100;
       timelineFill.style.width = pct + '%';
 
       const sec = Math.floor(currentTime);
       const str = '00:' + (sec < 10 ? '0' : '') + sec;
-      timeDisplay.innerText = str + ' / 00:28';
+      timeCounter.innerText = str + ' / 00:28';
 
-      // Scene Tabs Highlight
-      const sceneCuts = [0, 5, 9, 17, 22];
+      // Scene Pills Active Sync
+      const cuts = [0, 4, 7, 10, 19, 23];
       document.querySelectorAll('.scene-pill').forEach((pill, idx) => {
-        const next = sceneCuts[idx + 1] || 28;
-        if (currentTime >= sceneCuts[idx] && currentTime < next) {
+        const next = cuts[idx + 1] || 28;
+        if (currentTime >= cuts[idx] && currentTime < next) {
           pill.classList.add('active');
         } else {
           pill.classList.remove('active');
@@ -1154,50 +1102,72 @@
       requestAnimationFrame(frameLoop);
     }
 
-    // Play / Pause Toggle
-    function togglePlayState() {
-      setupAudioContext();
+    // Player Interactions
+    function togglePlay() {
+      setupAudio();
       if (currentTime >= TOTAL_DURATION) currentTime = 0;
       isPlaying = !isPlaying;
-      playToggleBtn.innerText = isPlaying ? '⏸ Jeda' : '▶ Putar';
+      playBtn.innerText = isPlaying ? '⏸ Jeda' : '▶ Putar';
       if (isPlaying) {
         heroPoster.classList.add('hidden');
       }
     }
 
-    function seekScene(targetSeconds) {
-      setupAudioContext();
+    function seekTime(targetSeconds) {
+      setupAudio();
       currentTime = targetSeconds;
       if (!isPlaying) {
         isPlaying = true;
-        playToggleBtn.innerText = '⏸ Jeda';
+        playBtn.innerText = '⏸ Jeda';
         heroPoster.classList.add('hidden');
       }
     }
 
-    playToggleBtn.addEventListener('click', togglePlayState);
-    heroPoster.addEventListener('click', togglePlayState);
+    playBtn.addEventListener('click', togglePlay);
+    heroPoster.addEventListener('click', togglePlay);
 
-    restartBtn.addEventListener('click', () => {
-      setupAudioContext();
+    resetBtn.addEventListener('click', () => {
+      setupAudio();
       currentTime = 0;
       isPlaying = true;
-      playToggleBtn.innerText = '⏸ Jeda';
+      playBtn.innerText = '⏸ Jeda';
       heroPoster.classList.add('hidden');
     });
 
-    audioToggleBtn.addEventListener('click', () => {
-      isAudioActive = !isAudioActive;
-      audioToggleBtn.innerText = isAudioActive ? '🔊 Audio: On' : '🔇 Audio: Off';
+    stepBackBtn.addEventListener('click', () => {
+      isPlaying = false;
+      playBtn.innerText = '▶ Putar';
+      currentTime = Math.max(0, currentTime - 1 / 60);
+      renderFrame(currentTime);
+    });
+
+    stepFwdBtn.addEventListener('click', () => {
+      isPlaying = false;
+      playBtn.innerText = '▶ Putar';
+      currentTime = Math.min(TOTAL_DURATION, currentTime + 1 / 60);
+      renderFrame(currentTime);
+    });
+
+    capturePngBtn.addEventListener('click', () => {
+      const link = document.createElement('a');
+      const fNum = Math.floor(currentTime * 60);
+      link.download = `PT-Sejahtera-Frame-${fNum}-t${currentTime.toFixed(2)}s.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    audioToggle.addEventListener('click', () => {
+      isAudioOn = !isAudioOn;
+      audioToggle.innerText = isAudioOn ? '🔊 Audio: On' : '🔇 Audio: Off';
     });
 
     timelineTrack.addEventListener('click', (e) => {
       const rect = timelineTrack.getBoundingClientRect();
-      const clickPos = (e.clientX - rect.left) / rect.width;
-      currentTime = clamp(clickPos * TOTAL_DURATION, 0, TOTAL_DURATION);
+      const pos = (e.clientX - rect.left) / rect.width;
+      currentTime = clamp(pos * TOTAL_DURATION, 0, TOTAL_DURATION);
     });
 
-    fullscreenBtn.addEventListener('click', () => {
+    fsBtn.addEventListener('click', () => {
       if (!document.fullscreenElement) {
         viewport.requestFullscreen().catch(() => {});
       } else {
@@ -1206,24 +1176,22 @@
     });
 
     // ==========================================
-    // EXPORT TO VIDEO FILE (MediaRecorder API)
+    // CLIENT-SIDE MP4/WEBM VIDEO EXPORT PIPELINE
     // ==========================================
-    exportVideoBtn.addEventListener('click', async () => {
-      setupAudioContext();
-      if (isRecordingExport) return;
+    exportBtn.addEventListener('click', async () => {
+      setupAudio();
+      if (isExporting) return;
 
-      exportVideoBtn.innerText = '⏳ Sedang Merekam...';
-      exportVideoBtn.disabled = true;
-      exportStatus.classList.add('active');
+      exportBtn.innerText = '⏳ Sedang Merekam...';
+      exportBtn.disabled = true;
+      exportLabel.classList.add('active');
 
-      // Reset to beginning
       currentTime = 0;
       isPlaying = true;
       heroPoster.classList.add('hidden');
-      isRecordingExport = true;
-      recordedChunks = [];
+      isExporting = true;
+      recordedBlobs = [];
 
-      // Combine Canvas Stream & Audio Stream
       const canvasStream = canvas.captureStream(60);
       const combinedTracks = [...canvasStream.getVideoTracks()];
 
@@ -1243,21 +1211,21 @@
 
       mediaRecorder.ondataavailable = (e) => {
         if (e.data && e.data.size > 0) {
-          recordedChunks.push(e.data);
+          recordedBlobs.push(e.data);
         }
       };
 
       mediaRecorder.onstop = () => {
-        isRecordingExport = false;
-        exportStatus.classList.remove('active');
-        exportVideoBtn.innerText = '📥 Ekspor Video (MP4)';
-        exportVideoBtn.disabled = false;
+        isExporting = false;
+        exportLabel.classList.remove('active');
+        exportBtn.innerText = '📥 Unduh Video (MP4)';
+        exportBtn.disabled = false;
 
-        const blob = new Blob(recordedChunks, { type: 'video/webm' });
+        const blob = new Blob(recordedBlobs, { type: 'video/webm' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'LPK-Sejahtera-Abadi-Bersama-Promo-28s.webm';
+        a.download = 'PT-Sejahtera-Abadi-Bersama-Tech-Commercial-28s.webm';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -1266,10 +1234,9 @@
 
       mediaRecorder.start();
 
-      // Interval to update progress percentage
-      const checkProgress = setInterval(() => {
-        if (!isRecordingExport) {
-          clearInterval(checkProgress);
+      const progressInterval = setInterval(() => {
+        if (!isExporting) {
+          clearInterval(progressInterval);
           return;
         }
         const pct = Math.floor((currentTime / TOTAL_DURATION) * 100);
@@ -1277,7 +1244,7 @@
       }, 200);
     });
 
-    // Start frame loop at t = 0
+    // Start 60 FPS Render Loop at t=0
     requestAnimationFrame(frameLoop);
   </script>
 </body>
