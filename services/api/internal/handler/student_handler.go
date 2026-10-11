@@ -30,7 +30,7 @@ func (h *Handler) GetStudentProfile(w http.ResponseWriter, r *http.Request) {
 		"id":        authUser.UserID,
 		"email":     authUser.Email,
 		"full_name": "Peserta Pelatihan LPK",
-		"phone":     "+62 812-3456-7890",
+		"contact":   "peserta@ratechs.id",
 		"role":      "student",
 	}
 

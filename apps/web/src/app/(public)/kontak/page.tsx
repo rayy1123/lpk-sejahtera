@@ -45,21 +45,11 @@ export default function KontakPage() {
 
             <div className="flex items-start gap-3.5">
               <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-secondary" />
-              </div>
-              <div className="space-y-1">
-                <span className="font-bold text-primary block text-sm">WhatsApp & Telepon Resmi</span>
-                <p>+62 812-3456-7890 (Layanan Calon Siswa)</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                 <Mail className="w-5 h-5 text-secondary" />
               </div>
               <div className="space-y-1">
-                <span className="font-bold text-primary block text-sm">Email Resmi</span>
-                <p>kontak@lpksejahtera.com</p>
+                <span className="font-bold text-primary block text-sm">Email Resmi Lembaga</span>
+                <p>ratechs.id (kontak@ratechs.id / info@ratechs.id)</p>
               </div>
             </div>
 
@@ -103,11 +93,11 @@ export default function KontakPage() {
                   />
                 </div>
                 <div>
-                  <label className="block font-semibold text-slate-700 mb-1">Nomor WhatsApp *</label>
+                  <label className="block font-semibold text-slate-700 mb-1">Alamat Email *</label>
                   <input
-                    type="tel"
+                    type="email"
                     required
-                    placeholder="0812xxxxxxxx"
+                    placeholder="nama@ratechs.id"
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-secondary"
                   />
                 </div>

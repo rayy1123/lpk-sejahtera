@@ -129,6 +129,14 @@ export default function HomePage() {
                 >
                   <span>Daftar Sekarang</span>
                 </Link>
+                <a
+                  href="/promo-video.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-secondary text-secondary hover:bg-secondary/10 text-base font-semibold shadow-sm transition-all"
+                >
+                  <span>▶ Tonton Video Animasi</span>
+                </a>
               </div>
 
               {/* Legalitas & Kepercayaan */}

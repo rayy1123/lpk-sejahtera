@@ -117,12 +117,8 @@ export default function Footer() {
                 <span>Jl. Kesejahteraan Raya No. 88, Pusat Pelatihan Kerja, Indonesia</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-secondary shrink-0" />
-                <span>+62 812-3456-7890 (WhatsApp Official)</span>
-              </div>
-              <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-secondary shrink-0" />
-                <span>kontak@lpksejahtera.com</span>
+                <span>Email: ratechs.id / kontak@ratechs.id</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-secondary shrink-0 mt-0.5" />

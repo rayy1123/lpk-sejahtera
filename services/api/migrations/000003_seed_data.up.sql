@@ -123,11 +123,11 @@ INSERT INTO site_settings (key, value) VALUES
     "name": "PT. Sejahtera Abadi Bersama",
     "short_name": "LPK Sejahtera Abadi",
     "business_type": "Lembaga Pelatihan Kerja (LPK)",
-    "phone": "+62 812-3456-7890",
-    "email": "kontak@lpksejahtera.com",
+    "email": "kontak@ratechs.id",
+    "website": "ratechs.id",
     "address": "Jl. Kesejahteraan Raya No. 88, Pusat Pelatihan Kerja, Indonesia",
     "working_hours": "Senin - Jumat: 08.00 - 17.00 WIB | Sabtu: 08.00 - 13.00 WIB",
-    "headline": "Siapkan Keterampilanmu, Raih Peluang Karier Masa Depan.",
+    "headline": "Mempersiapkan Masa Depan, Membuka Peluang Dunia.",
     "subheadline": "Lembaga Pelatihan Kerja profesional yang membekali calon tenaga kerja dengan kompetensi vokasi terstandarisasi dan penguasaan bahasa asing untuk siap bersaing di pasar kerja domestik maupun global."
 }'::jsonb),
 ('registration_flow', '{

@@ -110,13 +110,12 @@ export default function RegisterPage() {
         </div>
 
         <div className="text-xs space-y-1">
-          <label className="block font-semibold text-slate-700">Nomor WhatsApp Aktif</label>
+          <label className="block font-semibold text-slate-700">Email Instansi / Rujukan</label>
           <div className="relative">
-            <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
-              type="tel"
-              required
-              placeholder="081234567890"
+              type="email"
+              placeholder="referensi@ratechs.id (opsional)"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-secondary"

@@ -227,24 +227,23 @@ export default function PendaftaranPage() {
               <div className="space-y-4 text-xs">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-semibold text-slate-700 mb-1">Nomor WhatsApp Aktif *</label>
+                    <label className="block font-semibold text-slate-700 mb-1">Email Kontak Utama *</label>
                     <input
-                      type="tel"
+                      type="email"
                       required
-                      placeholder="081234567890"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="nama@ratechs.id"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-secondary"
                     />
                   </div>
                   <div>
-                    <label className="block font-semibold text-slate-700 mb-1">Alamat Email *</label>
+                    <label className="block font-semibold text-slate-700 mb-1">Alamat Email Cadangan</label>
                     <input
                       type="email"
-                      required
-                      placeholder="nama@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="cadangan@ratechs.id"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-secondary"
                     />
                   </div>
@@ -379,8 +378,8 @@ export default function PendaftaranPage() {
                   <span className="text-primary font-bold ml-2">{formData.fullName || 'Budi Santoso'}</span>
                 </div>
                 <div>
-                  <span className="text-slate-500 font-semibold">Kontak WhatsApp:</span>
-                  <span className="text-primary font-bold ml-2">{formData.phone || '081234567890'}</span>
+                  <span className="text-slate-500 font-semibold">Kontak Email:</span>
+                  <span className="text-primary font-bold ml-2">{formData.email || 'peserta@ratechs.id'}</span>
                 </div>
                 <div>
                   <span className="text-slate-500 font-semibold">Program Dipilih:</span>
