@@ -154,12 +154,33 @@ func (r *Repository) CreateApplication(ctx context.Context, studentID, programID
 		return app, nil
 	}
 
-	// Transaction with quota verification
+	// Transaction with quota verification and idempotency check
 	tx, err := r.pool.Begin(ctx)
 	if err != nil {
 		return nil, err
 	}
 	defer tx.Rollback(ctx)
+
+	// Check if student already has an active application for this program (prevent duplicate applications on retry)
+	var existingApp domain.Application
+	checkExistingQuery := `
+		SELECT id, application_number, status, submitted_at, created_at, updated_at
+		FROM applications
+		WHERE student_id = $1 AND program_id = $2 AND status IN ('submitted', 'under_review', 'verified', 'approved')
+		LIMIT 1
+	`
+	err = tx.QueryRow(ctx, checkExistingQuery, studentID, programID).Scan(
+		&existingApp.ID, &existingApp.ApplicationNumber, &existingApp.Status,
+		&existingApp.SubmittedAt, &existingApp.CreatedAt, &existingApp.UpdatedAt,
+	)
+	if err == nil {
+		// Active application already exists: return existing application idempotently
+		existingApp.StudentID = studentID
+		existingApp.ProgramID = programID
+		return &existingApp, nil
+	} else if err != pgx.ErrNoRows {
+		return nil, err
+	}
 
 	// Check program quota
 	var currentCount int
@@ -194,6 +215,21 @@ func (r *Repository) CreateApplication(ctx context.Context, studentID, programID
 	}
 
 	return app, nil
+}
+
+func (r *Repository) UpdateProfile(ctx context.Context, userID uuid.UUID, fullName, phone string) error {
+	if r.pool == nil {
+		return nil
+	}
+	query := `
+		UPDATE profiles
+		SET full_name = COALESCE(NULLIF($2, ''), full_name),
+		    phone = COALESCE(NULLIF($3, ''), phone),
+		    updated_at = NOW()
+		WHERE id = $1
+	`
+	_, err := r.pool.Exec(ctx, query, userID, fullName, phone)
+	return err
 }
 
 func (r *Repository) GetStudentApplications(ctx context.Context, studentID uuid.UUID) ([]domain.Application, error) {

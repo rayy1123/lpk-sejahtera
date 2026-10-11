@@ -119,6 +119,15 @@ paths:
               required: [program_id]
               properties:
                 program_id: { type: string, format: uuid }
+                full_name: { type: string }
+                nik: { type: string }
+                email: { type: string }
+                phone: { type: string }
+                gender: { type: string }
+                birth_date: { type: string }
+                address: { type: string }
+                education: { type: string }
+                consent: { type: boolean }
       responses:
         '201':
           description: Pendaftaran berhasil diajukan

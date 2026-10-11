@@ -11,11 +11,12 @@
     "render:stills": "remotion still src/index.ts LpkAbadiCommercial output/frame-0.png --frame=0 && remotion still src/index.ts LpkAbadiCommercial output/frame-240.png --frame=240 && remotion still src/index.ts LpkAbadiCommercial output/frame-480.png --frame=480 && remotion still src/index.ts LpkAbadiCommercial output/frame-1080.png --frame=1080 && remotion still src/index.ts LpkAbadiCommercial output/frame-1679.png --frame=1679"
   },
   "dependencies": {
-    "@remotion/bundler": "^4.0.140",
-    "@remotion/cli": "^4.0.140",
+    "@remotion/bundler": "4.0.218",
+    "@remotion/cli": "4.0.218",
+    "@remotion/renderer": "4.0.218",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remotion": "^4.0.140"
+    "remotion": "4.0.218"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

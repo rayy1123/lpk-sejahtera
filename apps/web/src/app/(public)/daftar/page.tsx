@@ -13,6 +13,8 @@ import {
   User,
   Mail,
   BookOpen,
+  AlertCircle,
+  RefreshCw,
 } from 'lucide-react';
 
 export default function PendaftaranPage() {
@@ -20,6 +22,7 @@ export default function PendaftaranPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [appNumber, setAppNumber] = useState('');
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Form State
   const [formData, setFormData] = useState({
@@ -72,18 +75,33 @@ export default function PendaftaranPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setSubmitError(null);
     try {
-      const res = await api.applyProgram(formData.programId);
+      const res = await api.applyProgram({
+        program_id: formData.programId,
+        full_name: formData.fullName,
+        nik: formData.nik,
+        email: formData.email,
+        phone: formData.phone,
+        gender: formData.gender,
+        birth_date: formData.birthDate,
+        address: formData.address,
+        education: formData.education,
+        consent: formData.consentAgreement,
+      });
       if (res && res.application_number) {
         setAppNumber(res.application_number);
+        setIsSubmitted(true);
       } else {
-        setAppNumber(`APP-LPK-${Math.floor(100000 + Math.random() * 900000)}`);
+        throw new Error('Server tidak mengembalikan nomor pendaftaran resmi.');
       }
-      setIsSubmitted(true);
-    } catch (err) {
-      console.warn('Error saat apply program:', err);
-      setAppNumber(`APP-LPK-${Math.floor(100000 + Math.random() * 900000)}`);
-      setIsSubmitted(true);
+    } catch (err: any) {
+      console.error('Pengiriman pendaftaran gagal:', err);
+      setSubmitError(
+        err.message ||
+        'Gagal mengirim pendaftaran ke server backend. Seluruh data formulir Anda tetap tersimpan dan tidak hilang. Silakan periksa koneksi atau coba kirim ulang.'
+      );
+      setIsSubmitted(false);
     } finally {
       setLoading(false);
     }
@@ -406,6 +424,19 @@ export default function PendaftaranPage() {
                   Saya menyatakan bahwa seluruh data dan dokumen yang saya berikan adalah benar dan asli. Saya menyetujui pemrosesan data pribadi untuk keperluan verifikasi pendaftaran di <strong>PT. Sejahtera Abadi Bersama</strong> sesuai kebijakan privasi yang berlaku.
                 </label>
               </div>
+
+              {submitError && (
+                <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 space-y-2 text-xs">
+                  <div className="flex items-center gap-2 font-bold text-rose-900">
+                    <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+                    <span>Pendaftaran Belum Diterima Server</span>
+                  </div>
+                  <p className="leading-relaxed">{submitError}</p>
+                  <p className="text-[11px] text-rose-700 font-medium">
+                    * Seluruh isian data diri, berkas, dan pilihan program Anda di formulir ini TIDAK HILANG. Anda dapat menekan tombol &quot;Kirim Ulang Pendaftaran&quot; di bawah.
+                  </p>
+                </div>
+              )}
             </div>
           )}
 
@@ -436,11 +467,25 @@ export default function PendaftaranPage() {
             ) : (
               <button
                 type="submit"
-                disabled={!formData.consentAgreement}
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-secondary hover:bg-secondary-dark disabled:opacity-50 text-white text-xs font-bold shadow-lg"
+                disabled={!formData.consentAgreement || loading}
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-secondary hover:bg-secondary-dark disabled:opacity-50 text-white text-xs font-bold shadow-lg transition-all"
               >
-                <span>Kirim Pendaftaran</span>
-                <CheckCircle2 className="w-4 h-4" />
+                {loading ? (
+                  <>
+                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    <span>Menghubungi Server...</span>
+                  </>
+                ) : submitError ? (
+                  <>
+                    <RefreshCw className="w-4 h-4" />
+                    <span>Kirim Ulang Pendaftaran</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Kirim Pendaftaran</span>
+                    <CheckCircle2 className="w-4 h-4" />
+                  </>
+                )}
               </button>
             )}
           </div>

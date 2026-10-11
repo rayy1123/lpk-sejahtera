@@ -12,6 +12,15 @@ import (
 
 type ApplyRequest struct {
 	ProgramID string `json:"program_id"`
+	FullName  string `json:"full_name,omitempty"`
+	NIK       string `json:"nik,omitempty"`
+	Email     string `json:"email,omitempty"`
+	Phone     string `json:"phone,omitempty"`
+	Gender    string `json:"gender,omitempty"`
+	BirthDate string `json:"birth_date,omitempty"`
+	Address   string `json:"address,omitempty"`
+	Education string `json:"education,omitempty"`
+	Consent   bool   `json:"consent,omitempty"`
 }
 
 type UpdateProfileRequest struct {
@@ -52,6 +61,8 @@ func (h *Handler) UpdateStudentProfile(w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusBadRequest, "Body request tidak valid")
 		return
 	}
+
+	_ = h.svc.UpdateStudentProfile(r.Context(), authUser.UserID, req.FullName, req.Phone)
 
 	// Pencegahan eskalasi role: role tetap student, user tidak bisa mengubah role miliknya
 	profile := map[string]interface{}{
@@ -102,10 +113,19 @@ func (h *Handler) SubmitApplication(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if req.ProgramID == "" {
+		respondError(w, http.StatusBadRequest, "Program ID wajib diisi")
+		return
+	}
+
 	progID, err := uuid.Parse(req.ProgramID)
 	if err != nil {
 		respondError(w, http.StatusBadRequest, "ID program tidak valid")
 		return
+	}
+
+	if req.FullName != "" || req.Phone != "" {
+		_ = h.svc.UpdateStudentProfile(r.Context(), authUser.UserID, req.FullName, req.Phone)
 	}
 
 	app, err := h.svc.ApplyProgram(r.Context(), authUser.UserID, progID)

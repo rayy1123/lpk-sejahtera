@@ -43,6 +43,13 @@ func (s *Service) GetStudentApplications(ctx context.Context, studentID uuid.UUI
 	return s.repo.GetStudentApplications(ctx, studentID)
 }
 
+func (s *Service) UpdateStudentProfile(ctx context.Context, studentID uuid.UUID, fullName, phone string) error {
+	if studentID == uuid.Nil {
+		return domain.ErrUnauthorized
+	}
+	return s.repo.UpdateProfile(ctx, studentID, fullName, phone)
+}
+
 // Admin
 func (s *Service) GetAdminMetrics(ctx context.Context) (*domain.DashboardMetrics, error) {
 	return s.repo.GetAdminDashboardMetrics(ctx)

@@ -28,7 +28,11 @@ async function fetchAPI<T>(endpoint: string, options: RequestInit = {}): Promise
     const data = await res.json();
     return data.data;
   } catch (error) {
-    console.warn(`API request ke ${endpoint} menggunakan fallback lokal:`, error);
+    // Mutations (POST, PUT, PATCH, DELETE) MUST throw errors and never return silent mock fallbacks!
+    if (options.method && options.method.toUpperCase() !== 'GET') {
+      throw error;
+    }
+    console.warn(`API query ke ${endpoint} menggunakan fallback lokal:`, error);
     return getFallbackData<T>(endpoint);
   }
 }
@@ -118,10 +122,22 @@ export const api = {
     return fetchAPI<Program>(`/programs/${slug}`);
   },
 
-  applyProgram: (programId: string) => {
+  applyProgram: (payload: {
+    program_id: string;
+    full_name?: string;
+    nik?: string;
+    email?: string;
+    phone?: string;
+    gender?: string;
+    birth_date?: string;
+    address?: string;
+    education?: string;
+    consent?: boolean;
+  } | string) => {
+    const bodyObj = typeof payload === 'string' ? { program_id: payload } : payload;
     return fetchAPI<Application>('/student/applications', {
       method: 'POST',
-      body: JSON.stringify({ program_id: programId }),
+      body: JSON.stringify(bodyObj),
     });
   },
 

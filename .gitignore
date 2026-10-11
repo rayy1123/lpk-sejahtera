@@ -5,6 +5,9 @@
 # Node.js & Next.js
 node_modules/
 apps/web/node_modules/
+video/node_modules/
+video/output/*.mp4
+video/output/*.webm
 .next/
 apps/web/.next/
 out/
